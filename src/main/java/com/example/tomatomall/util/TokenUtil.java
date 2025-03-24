@@ -13,7 +13,7 @@ public class TokenUtil {
     private static final long EXPIRE_TIME = 24 * 60 * 60 * 1000;
 
     @Autowired
-    AccountRepository userRepository;
+    AccountRepository accountRepository;
 
     public String getToken(Account user) {
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
@@ -26,8 +26,8 @@ public class TokenUtil {
     public boolean verifyToken(String token) {
         try {
             Integer userId=Integer.parseInt(JWT.decode(token).getAudience().get(0));
-            User user= userRepository.findById(userId).get();
-            JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(user.getPassword())).build();
+            Account ac= accountRepository.findById(userId).get();
+            JWTVerifier jwtVerifier = JWT.require(Algorithm.HMAC256(ac.getPassword())).build();
             jwtVerifier.verify(token);
             return true;
         }catch (Exception e){
@@ -35,8 +35,8 @@ public class TokenUtil {
         }
     }
 
-    public User getUser(String token){
+    public Account getAccount(String token){
         Integer userId=Integer.parseInt(JWT.decode(token).getAudience().get(0));
-        return userRepository.findById(userId).get();
+        return accountRepository.findById(userId).get();
     }
 }

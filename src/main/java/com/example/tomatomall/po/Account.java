@@ -28,20 +28,18 @@ public class Account {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "phone")
-    private String phone;
-
-    @Column(name = "address")
-    private String address;
+    @Column(name = "telephone")
+    private String telephone;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "imgUrl")
-    private String imgUrl;
+    @Column(name = "avatar")
+    private String avatar;
 
-    @Column(name = "create_time")
-    private Date createTime;
+    @Column(name="location")
+    private String location;
+
 
     public AccountVO toVO(){
         AccountVO accountVO = new AccountVO();
@@ -49,11 +47,11 @@ public class Account {
         accountVO.setUsername(this.username);
         accountVO.setPassword(this.password);
         accountVO.setEmail(this.email);
-        accountVO.setPhone(this.phone);
-        accountVO.setAddress(this.address);
+        accountVO.setTelephone(this.telephone);
+        accountVO.setLocation(this.location);
         accountVO.setName(this.name);
-        accountVO.setImgUrl(this.imgUrl);
-        accountVO.setCreateTime(this.createTime);
+        accountVO.setAvatar(this.avatar);
+
         return accountVO;
     }
 }

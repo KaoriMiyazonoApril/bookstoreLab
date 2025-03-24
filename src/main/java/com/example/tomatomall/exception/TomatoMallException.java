@@ -17,4 +17,8 @@ public class TomatoMallException extends RuntimeException {
     public static  TomatoMallException DuplicateName(){
         return new TomatoMallException("用户名重复");
     }
+
+    public static  TomatoMallException ProductNotFound(){
+        return new TomatoMallException("未找到对应商品");
+    }
 }

@@ -79,6 +79,8 @@ public class AccountServiceImpl implements AccountService {
         if(password!=null){
             ac.setPassword(passwordEncoder.encode(password));
         }
+
+        accountRepository.save(ac);
         return true;
     }
 }

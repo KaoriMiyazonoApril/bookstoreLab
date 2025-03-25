@@ -1,5 +1,6 @@
 package com.example.tomatomall.controller;
 
+import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.service.ProductService;
 import com.example.tomatomall.vo.ProductVO;
 import com.example.tomatomall.vo.Response;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/products")
@@ -41,8 +43,11 @@ public class ProductController {
     }
 
     @PatchMapping("/stockpile/{productId}")
-    public Response updateProductAmount(@PathVariable(value = "productId") Integer id){
-        return;
+    public Response updateProductAmount(@PathVariable(value = "productId") Integer id,@RequestBody Map<String, Integer> updates){
+        if(!updates.containsKey("amount")) {
+            throw TomatoMallException.NoEnoughArguments();
+        }
+        return Response.buildSuccess(productService.updateAmount(id,updates.get("amount")));
     }
 
     @GetMapping("/stockpile/{productId}")

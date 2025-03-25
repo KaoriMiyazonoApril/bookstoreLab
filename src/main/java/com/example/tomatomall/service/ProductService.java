@@ -47,6 +47,9 @@ public class ProductService {
 
     public Boolean createProduct(String title, Double price, Float rate, String description, String cover, String detail, String item, String value
     ){
+        Product tem=productRepository.findByTitle(title);
+        if(tem!=null)
+            throw TomatoMallException.DuplicateProduct();
         Product p=new Product();
         p.setTitle(title);
         p.setPrice(price);
@@ -66,7 +69,31 @@ public class ProductService {
     }
 
     public Boolean updateProduct(String title, Double price, Float rate, String description, String cover, String detail, String item, String value){
+        Product p=productRepository.findByTitle(title);
+        if(p==null) {
+            throw TomatoMallException.ProductNotFound();
+        }
 
+        p.setPrice(price);
+        p.setRate(rate);
+        if(description!=null)
+            p.setDescription(description);
+        if(cover!=null)
+            p.setCover(cover);
+        if(detail!=null)
+            p.setDetail(detail);
+        if(item !=null && value !=null){
+            ProductSet t=new ProductSet(item,value,0);//不能得知插入数据库时候的编号
+            p.setSpecifications(t);
+        }
+        productRepository.save(p);
+        return true;
+    }
+
+    public Boolean updateAmount(Integer id,Integer amount){
+        Product p=productRepository.findById(id).get();
+        p.setAmount(amount);
+        return true;
     }
 }
 

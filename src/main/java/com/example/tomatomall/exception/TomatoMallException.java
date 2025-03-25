@@ -21,4 +21,12 @@ public class TomatoMallException extends RuntimeException {
     public static  TomatoMallException ProductNotFound(){
         return new TomatoMallException("未找到对应商品");
     }
+
+    public static  TomatoMallException DuplicateProduct(){
+        return new TomatoMallException("已存在同名商品");
+    }
+
+    public static  TomatoMallException NoEnoughArguments(){
+        return new TomatoMallException("提供的参数数量不足");
+    }
 }

@@ -38,6 +38,7 @@ public class Product {
     @Column(name = "detail")
     private String detail;
 
+    @Embedded
     @Column(name="specifications")
     public ProductSet specifications;
 

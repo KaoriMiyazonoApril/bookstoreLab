@@ -6,10 +6,14 @@ import com.example.tomatomall.repository.ProductRepository;
 import com.example.tomatomall.util.ProductSet;
 import com.example.tomatomall.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+@Service
 public class ProductService {
     @Autowired
     ProductRepository productRepository;

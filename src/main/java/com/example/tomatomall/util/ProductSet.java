@@ -2,6 +2,9 @@ package com.example.tomatomall.util;
 
 import com.example.tomatomall.po.Product;
 
+import javax.persistence.Embeddable;
+
+@Embeddable
 public class ProductSet {
     public String item,value;
     public Integer productId;
@@ -12,4 +15,7 @@ public class ProductSet {
         this.productId=id;
     }
 
+    public ProductSet() {
+
+    }
 }

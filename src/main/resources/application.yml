@@ -14,6 +14,9 @@ spring:
     active: default
 server:
   port: 8080
-logging:
-  level:
-    org.springframework.web: DEBUG
+aliyun:
+  oss:
+    endpoint: oss-cn-nanjing.aliyuncs.com
+    access-key-id: LTAI5tR63tGWE8SFnqKtCGEQ
+    access-key-secret: TnD44Rkhocf6svy3FOkCQDUaQVJ0Gx
+    bucket-name: wwhyiyun

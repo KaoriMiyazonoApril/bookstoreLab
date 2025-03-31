@@ -34,4 +34,8 @@ public class TomatoMallException extends RuntimeException {
     public static TomatoMallException InvalidPhoneNumber() {
         return new TomatoMallException("手机号格式不正确，请输入11位有效手机号");
     }
+
+    public static TomatoMallException notLogin() { return new TomatoMallException("未登录，请先登录");}
+
+    public static TomatoMallException phoneAlreadyExists(){return new TomatoMallException("手机号已存在，请使用其他手机号注册");}
 }

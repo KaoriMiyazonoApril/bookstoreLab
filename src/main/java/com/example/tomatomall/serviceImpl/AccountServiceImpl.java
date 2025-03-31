@@ -4,14 +4,12 @@ import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.po.Account;
 import com.example.tomatomall.repository.AccountRepository;
 import com.example.tomatomall.service.AccountService;
+import com.example.tomatomall.util.SecurityUtil;
 import com.example.tomatomall.util.TokenUtil;
 import com.example.tomatomall.vo.AccountVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Date;
-import java.util.List;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -24,28 +22,24 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    SecurityUtil securityUtil;
+
+
     public Boolean register(AccountVO accountVO) {
-        // 手机号校验保持不变
-        if (!accountVO.getPhone().matches("^1[3-9]\\d{9}$")) {
-            throw TomatoMallException.InvalidPhoneNumber();
-        }
         Account account = accountRepository.findByPhone(accountVO.getPhone());
         if (account != null) {
-            return false;
+            throw TomatoMallException.phoneAlreadyExists();
         }
-        Account newAccount = accountVO.toPO();
-        // 加密密码
-        newAccount.setPassword(passwordEncoder.encode(accountVO.getPassword()));
-        accountRepository.save(newAccount);
+        Account newUser = accountVO.toPO();
+        newUser.setPassword(passwordEncoder.encode(accountVO.getPassword()));
+        accountRepository.save(newUser);
         return true;
     }
 
     @Override
-    public AccountVO getInformation(String username) {
-        Account account = accountRepository.findByUsername(username);
-        if (account == null) {
-            throw TomatoMallException.WrongUsername();
-        }
+    public AccountVO getInformation() {
+        Account account=securityUtil.getCurrentUser();
         return account.toVO();
     }
 

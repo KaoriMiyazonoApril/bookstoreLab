@@ -23,4 +23,5 @@ public class Response<T> implements Serializable {
     public static <T> Response<T> buildFailure(String msg, String code) {
         return new Response<T>(code, msg, null);
     }
+
 }

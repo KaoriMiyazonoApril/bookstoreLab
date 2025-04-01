@@ -1,10 +1,7 @@
 package com.example.tomatomall.service;
 
-
-import com.example.tomatomall.po.Account;
-import com.example.tomatomall.repository.AccountRepository;
 import com.example.tomatomall.vo.AccountVO;
-import org.springframework.beans.factory.annotation.Autowired;
+
 
 public interface AccountService {
 

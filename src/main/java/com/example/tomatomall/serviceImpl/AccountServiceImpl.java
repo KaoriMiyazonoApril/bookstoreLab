@@ -1,17 +1,15 @@
-package com.example.tomatomall.service.serviceImpl;
+package com.example.tomatomall.serviceImpl;
 
 import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.po.Account;
 import com.example.tomatomall.repository.AccountRepository;
 import com.example.tomatomall.service.AccountService;
+import com.example.tomatomall.util.SecurityUtil;
 import com.example.tomatomall.util.TokenUtil;
 import com.example.tomatomall.vo.AccountVO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import java.util.Date;
-import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -24,30 +22,36 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+    @Autowired
+    SecurityUtil securityUtil;
+
+
     public Boolean register(AccountVO accountVO) {
-        Account account=accountRepository.findByPhone(accountVO.getPhone());
-        if(account!=null){
-            return false;
+        Account account = accountRepository.findByPhone(accountVO.getPhone());
+        if (account != null) {
+            throw TomatoMallException.phoneAlreadyExists();
         }
-        Account newAccount=accountVO.toPO();
-        newAccount.setCreateTime(new Date());
-        accountRepository.save(newAccount);
+        Account newUser = accountVO.toPO();
+        newUser.setPassword(passwordEncoder.encode(accountVO.getPassword()));
+        accountRepository.save(newUser);
         return true;
     }
 
     @Override
     public AccountVO getInformation() {
-        return null;
+        Account account=securityUtil.getCurrentUser();
+        return account.toVO();
     }
 
     @Override
-    public String login(String username,String pwd){
-        Account ac=accountRepository.findByUsername(username);
-        if(ac==null){
+    public String login(String username, String pwd) {
+        Account ac = accountRepository.findByUsername(username);
+        if (ac == null) {
             throw TomatoMallException.WrongUsername();
         }
 
-        if(!passwordEncoder.matches(pwd,ac.getPassword())){
+        // 使用matches方法验证密码
+        if (!passwordEncoder.matches(pwd, ac.getPassword())) {
             throw TomatoMallException.WrongPassword();
         }
 
@@ -55,28 +59,29 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Boolean update(String username,String password,String name,String avatar,String telephone,String email,String location){
-        Account ac=accountRepository.findByUsername(username);
-        if(ac==null){
+    public Boolean update(String username, String password, String name, String avatar, String telephone, String email, String location) {
+        Account ac = accountRepository.findByUsername(username);
+        if (ac == null) {
             throw TomatoMallException.WrongUsername();
         }
-        if(name!=null){
+        if (name != null) {
             ac.setName(name);
         }
-        if(avatar!=null){
+        if (avatar != null) {
             ac.setAvatar(avatar);
         }
-        if(telephone!=null){
-            ac.setTelephone(telephone);
+        if (telephone != null) {
+            ac.setPhone(telephone);
         }
-        if(email!=null){
+        if (email != null) {
             ac.setEmail(email);
         }
-        if(location!=null){
+        if (location != null) {
             ac.setLocation(location);
         }
 
-        if(password!=null){
+        if (password != null) {
+            // 加密新密码
             ac.setPassword(passwordEncoder.encode(password));
         }
 
@@ -84,3 +89,4 @@ public class AccountServiceImpl implements AccountService {
         return true;
     }
 }
+

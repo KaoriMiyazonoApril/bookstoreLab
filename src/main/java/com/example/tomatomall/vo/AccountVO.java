@@ -5,33 +5,31 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.Date;
-
 @Getter
 @Setter
 @NoArgsConstructor
 public class AccountVO {
     private Integer id;
+    private String username;
+    private String password;
+    private String phone;
     private String name;
     private String email;
-    private String telephone;
     private String location;
+    private String role ;
     private String avatar;
-    private String password;
-    private String username;
 
-
-    public Account toPO(){
+    public Account toPO() {
         Account account = new Account();
         account.setId(this.id);
         account.setName(this.name);
         account.setEmail(this.email);
-        account.setTelephone(this.telephone);
+        account.setPhone(this.phone);
         account.setLocation(this.location);
         account.setAvatar(this.avatar);
         account.setPassword(this.password);
         account.setUsername(this.username);
-        account.setLocation(this.location);
+        account.setRole(this.role);
         return account;
     }
 

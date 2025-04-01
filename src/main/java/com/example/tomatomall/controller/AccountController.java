@@ -1,11 +1,12 @@
 package com.example.tomatomall.controller;
 
 import com.example.tomatomall.service.AccountService;
+import com.example.tomatomall.vo.AccountVO;
 import com.example.tomatomall.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
+
 
 @RestController
 @RequestMapping("/api/accounts")
@@ -17,24 +18,33 @@ public class AccountController {
     /**
      * 获取用户详情
      */
-    @GetMapping()
-    public Response getUser() {
-        return null;
+    @GetMapping("/{username}")
+    public Response<AccountVO> getUser() { // 移除@RequestHeader参数
+        return Response.buildSuccess(accountService.getInformation());
     }
 
     /**
      * 创建新的用户
      */
+    // 在注册方法中添加role参数
     @PostMapping()
-    public Response createUser() {
-        return null;
+    public Response<Boolean> createUser(@RequestBody AccountVO accountVO) {
+        return Response.buildSuccess(accountService.register(accountVO));
     }
 
     /**
      * 更新用户信息
      */
     @PutMapping()
-    public Response updateUser(@RequestParam(required = true,name="username") String username,@RequestParam(required = false,name="password") String password,@RequestParam(required = false,name="name") String name,@RequestParam(required = false,name="avatar") String avatar,@RequestParam(required = false,name="telephone") String telephone,@RequestParam(required = false,name="email") String email,@RequestParam(required = false,name="location") String location) {
+    // 在更新方法中添加role参数
+    public Response updateUser(@RequestParam(required = true,name="username") String username,
+                             @RequestParam(required = false,name="password") String password,
+                             @RequestParam(required = false,name="name") String name,
+                             @RequestParam(required = false,name="avatar") String avatar,
+                             @RequestParam(required = false,name="telephone") String telephone,
+                             @RequestParam(required = false,name="email") String email,
+                             @RequestParam(required = false,name="location") String location,
+                             @RequestParam(required = false,name="role") String role) {
 
         return Response.buildSuccess(accountService.update(username,password,name,avatar,telephone,email,location));
     }

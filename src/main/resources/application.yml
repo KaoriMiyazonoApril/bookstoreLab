@@ -21,3 +21,13 @@ aliyun:
     access-key-id: ${ALIYUN_ACCESS_KEY_ID}
     access-key-secret: ${ALIYUN_ACCESS_SECRET}
     bucket-name: ${ALIYUN_BUCKET_NAME}
+
+alipay:
+  app-id: APPID
+  private-key:
+  alipay-public-key:
+  server-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  charset: utf-8
+  sign-type: RSA2
+  notify-url:  http://mkcaa9.natappfree.cc/alipay/notify(填写你的地址+/alipay/notify)
+  return-url:  http://mkcaa9.natappfree.cc/alipay/returnUrl(支付成功回调的地址)

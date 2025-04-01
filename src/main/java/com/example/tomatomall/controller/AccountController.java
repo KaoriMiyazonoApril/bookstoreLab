@@ -5,7 +5,7 @@ import com.example.tomatomall.vo.AccountVO;
 import com.example.tomatomall.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import org.springframework.web.multipart.MultipartFile;
 
 
 @RestController
@@ -19,8 +19,8 @@ public class AccountController {
      * 获取用户详情
      */
     @GetMapping("/{username}")
-    public Response<AccountVO> getUser() { // 移除@RequestHeader参数
-        return Response.buildSuccess(accountService.getInformation());
+    public Response<AccountVO> getUser(@PathVariable String username) {
+        return Response.buildSuccess(accountService.getUserByUsername(username));
     }
 
     /**
@@ -28,8 +28,9 @@ public class AccountController {
      */
     // 在注册方法中添加role参数
     @PostMapping()
-    public Response<Boolean> createUser(@RequestBody AccountVO accountVO) {
-        return Response.buildSuccess(accountService.register(accountVO));
+    public Response<Boolean> createUser(@RequestBody AccountVO accountVO,
+                                        @RequestPart(value = "avatar", required = false) MultipartFile avatarFile) {
+        return Response.buildSuccess(accountService.register(accountVO, avatarFile));
     }
 
     /**

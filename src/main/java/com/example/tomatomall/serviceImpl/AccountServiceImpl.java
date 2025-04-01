@@ -10,6 +10,9 @@ import com.example.tomatomall.vo.AccountVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @Service
 public class AccountServiceImpl implements AccountService {
@@ -25,21 +28,35 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     SecurityUtil securityUtil;
 
+    @Autowired
+    OssService ossService;
 
-    public Boolean register(AccountVO accountVO) {
+
+    public Boolean register(AccountVO accountVO, MultipartFile avatarFile) {
         Account account = accountRepository.findByPhone(accountVO.getPhone());
         if (account != null) {
             throw TomatoMallException.phoneAlreadyExists();
         }
         Account newUser = accountVO.toPO();
+        try {
+            if (avatarFile != null && !avatarFile.isEmpty()) {
+                String avatarUrl = ossService.upload(avatarFile, "avatars");
+                newUser.setAvatar(avatarUrl);
+            }
+        } catch (IOException e) {
+            throw new TomatoMallException("头像上传失败");
+        }
         newUser.setPassword(passwordEncoder.encode(accountVO.getPassword()));
         accountRepository.save(newUser);
         return true;
     }
 
     @Override
-    public AccountVO getInformation() {
-        Account account=securityUtil.getCurrentUser();
+    public AccountVO getUserByUsername(String username) {
+        Account account = accountRepository.findByUsername(username);
+        if (account == null) {
+            throw TomatoMallException.WrongUsername();
+        }
         return account.toVO();
     }
 

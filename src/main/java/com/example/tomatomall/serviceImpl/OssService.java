@@ -3,6 +3,7 @@ package com.example.tomatomall.serviceImpl;
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.OSSException;
+import com.example.tomatomall.exception.TomatoMallException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -32,7 +33,7 @@ public class OssService {
             ossClient.putObject(bucketName, fileName, file.getInputStream());
             return generateUrl(fileName);
         } catch (OSSException e) {
-            throw new RuntimeException("OSS服务异常: " + e.getErrorMessage(), e);
+            throw TomatoMallException.ossError();
         } finally {
             ossClient.shutdown();
         }

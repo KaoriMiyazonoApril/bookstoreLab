@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-04-02T07:07:46.110+00:00",
+  "status": 405,
+  "error": "Method Not Allowed",
+  "path": "/api/accounts/"
+}

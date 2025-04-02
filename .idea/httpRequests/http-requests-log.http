@@ -1,4 +1,121 @@
 GET http://localhost:8080/api/accounts/123
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NTc2NX0.QvnvkbKBpKH-PkAiqE17VzWY7QZOAsJMIQxfW1gK08U
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+<> 2025-04-02T153635.200.json
+
+###
+
+GET http://localhost:8080/api/accounts/123
+token: yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NTc2NX0.QvnvkbKBpKH-PkAiqE17VzWY7QZOAsJMIQxfW1gK08U
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+<> 2025-04-02T153632.200.json
+
+###
+
+GET http://localhost:8080/api/accounts/123
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NTc2NX0.QvnvkbKBpKH-PkAiqE17VzWY7QZOAsJMIQxfW1gK08U
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+<> 2025-04-02T153622.200.json
+
+###
+
+POST http://localhost:8080/api/accounts/login
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 25
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+username=123&password=123
+
+<> 2025-04-02T153605.200.json
+
+###
+
+GET http://localhost:8080/api/accounts
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NDAzOH0.te2tPoLno8xqWr2_Cx0ytINwrBoQqxLJMKs3IKn1xv4
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4696BEF68F96D0C79D115CEA7A49E45E; JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+<> 2025-04-02T153600.405.json
+
+###
+
+POST http://localhost:8080/api/users/register
+Content-Type: application/json
+Content-Length: 107
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+{
+  "password": "123",
+  "phone": "13800138005",
+  "email": "test@example.com",
+  "name": "测试用户0"
+}
+
+###
+
+GET http://localhost:8080/api/accounts/123
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1iJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NTczM30.86AcF48Vs202WgSml-t7hZF7KLXTU39b_0ei4-Dt1NI
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=64612BFBEB7E610FC92F6C99AE568C14
+
+<> 2025-04-02T153546.200.json
+
+###
+
+GET http://localhost:8080/api/accounts/123
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NTczM30.86AcF48Vs202WgSml-t7hZF7KLXTU39b_0ei4-Dt1NI
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=BD86AF7FBF59DA1A41F86BF6E7EADC4E
+
+<> 2025-04-02T153543.200.json
+
+###
+
+POST http://localhost:8080/api/accounts/login
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 25
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=BD86AF7FBF59DA1A41F86BF6E7EADC4E
+
+username=123&password=123
+
+<> 2025-04-02T153533.200.json
+
+###
+
+GET http://localhost:8080/api/accounts/123
 token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NDUzNn0.oVMhkYLEq1L870fKGHOF97p94FWnKLmZkWgYcV7b3c8
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
@@ -145,5 +262,5 @@ Content-Type: application/x-www-form-urlencoded
 username=123&password=123
 ###
 GET http://localhost:8080/api/accounts/123
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NDUzNn0.oVMhkYLEq1L870fKGHOF97p94FWnKLmZkWgYcV7b3c8
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNSIsImV4cCI6MTc0MzY2NTc2NX0.QvnvkbKBpKH-PkAiqE17VzWY7QZOAsJMIQxfW1gK08U
 Content-Type: application/json

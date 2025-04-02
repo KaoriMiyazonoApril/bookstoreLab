@@ -29,7 +29,7 @@ public class AccountVO {
         account.setAvatar(this.avatar);
         account.setPassword(this.password);
         account.setUsername(this.username);
-        account.setLocation(this.location);
+        account.setRole(this.role);
         return account;
     }
 

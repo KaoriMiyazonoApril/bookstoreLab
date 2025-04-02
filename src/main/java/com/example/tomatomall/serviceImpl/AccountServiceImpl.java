@@ -4,7 +4,6 @@ import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.po.Account;
 import com.example.tomatomall.repository.AccountRepository;
 import com.example.tomatomall.service.AccountService;
-import com.example.tomatomall.util.SecurityUtil;
 import com.example.tomatomall.util.TokenUtil;
 import com.example.tomatomall.vo.AccountVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,27 +21,24 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    SecurityUtil securityUtil;
-
 
     public Boolean register(AccountVO accountVO) {
-        Account account = accountRepository.findByPhone(accountVO.getPhone());
+        Account account = accountRepository.findByUsername(accountVO.getUsername());
         if (account != null) {
-            throw TomatoMallException.phoneAlreadyExists();
+            throw TomatoMallException.DuplicateName();
         }
         Account newUser = accountVO.toPO();
         newUser.setPassword(passwordEncoder.encode(accountVO.getPassword()));
         accountRepository.save(newUser);
         return true;
     }
-
+    /*
     @Override
     public AccountVO getInformation() {
         Account user=securityUtil.getCurrentUser();
         return user.toVO();
     }
-
+    */
     @Override
     public AccountVO getUserByUsername(String username) {
         Account account = accountRepository.findByUsername(username);

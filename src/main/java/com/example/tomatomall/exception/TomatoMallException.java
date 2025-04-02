@@ -38,4 +38,6 @@ public class TomatoMallException extends RuntimeException {
     public static TomatoMallException notLogin() { return new TomatoMallException("未登录，请先登录");}
 
     public static TomatoMallException phoneAlreadyExists(){return new TomatoMallException("手机号已存在，请使用其他手机号注册");}
+
+    public static TomatoMallException ossError(){return new TomatoMallException("oss服务出现异常");};
 }

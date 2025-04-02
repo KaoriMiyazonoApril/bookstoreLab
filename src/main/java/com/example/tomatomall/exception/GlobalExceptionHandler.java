@@ -8,6 +8,6 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(value = TomatoMallException.class)
     public Response<String> handleAIExternalException(TomatoMallException e) {
         e.printStackTrace();
-        return Response.buildFailure(e.getMessage(),"400");
+        return Response.buildFailure(e.getMessage(), "400");
     }
 }

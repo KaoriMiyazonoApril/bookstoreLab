@@ -20,22 +20,13 @@ public class Carts {
     private Integer cartItemId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private Account account;
 
     @ManyToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "product_id", referencedColumnName = "id")
     private Product product;
 
-    @Setter
-    @Column(name = "user_id")
-    private Integer userId;
-
-    @Setter
-    @Column(name = "product_id")
-    private Integer productId;
-
-    @Setter
     @Column(name = "quantity")
     private Integer quantity;
 
@@ -43,8 +34,12 @@ public class Carts {
         CartsVO cartsVO = new CartsVO();
         cartsVO.setCartItemId(cartItemId);
         cartsVO.setQuantity(this.quantity);
-        cartsVO.setUserId(this.userId);
-        cartsVO.setProductId(this.productId);
+        if (this.product != null) {
+            cartsVO.setProduct(this.product.toVO());
+        }
+        if (this.account != null) {
+            cartsVO.setAccount(this.account.toVO());
+        }
         return cartsVO;
     }
 }

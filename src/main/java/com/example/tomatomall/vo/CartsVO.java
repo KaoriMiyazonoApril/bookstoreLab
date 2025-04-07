@@ -6,21 +6,27 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+
 @Getter
 @Setter
 @NoArgsConstructor
 public class CartsVO {
     private Integer cartItemId;
-    private Integer userId;
-    private Integer productId;
+    private ProductVO product;
+    private AccountVO account;
     private Integer quantity;
 
     public Carts toPO() {
         Carts carts = new Carts();
         carts.setCartItemId(cartItemId);
-        carts.setUserId(userId);
-        carts.setProductId(productId);
         carts.setQuantity(quantity);
+        if (product != null) {
+            carts.setProduct(product.toPO());
+        }
+        if (account != null) {
+            carts.setAccount(account.toPO());
+        }
         return carts;
     }
 

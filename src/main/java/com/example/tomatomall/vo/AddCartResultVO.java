@@ -8,8 +8,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class AddCartResultVO {
-    private Integer cartItemId;
-    private Integer productId;
+    private String cartItemId;
+    private String productId;
     private String title;
     private Double price;
     private String description;

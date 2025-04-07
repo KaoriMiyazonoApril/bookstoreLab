@@ -1,0 +1,14 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "result": {
+    "cartItemId": "3",
+    "productId": "2",
+    "title": "test2",
+    "price": null,
+    "description": null,
+    "cover": null,
+    "detail": null,
+    "quantity": 1
+  }
+}

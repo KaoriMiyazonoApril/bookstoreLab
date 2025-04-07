@@ -7,10 +7,13 @@ import com.example.tomatomall.po.Product;
 import com.example.tomatomall.service.CartsService;
 import com.example.tomatomall.util.SecurityUtil;
 import com.example.tomatomall.vo.AddCartResultVO;
+import com.example.tomatomall.vo.CartResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.tomatomall.repository.CartsRepository;
 import com.example.tomatomall.repository.ProductRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -26,40 +29,41 @@ public class CartsServiceImpl implements CartsService {
     private SecurityUtil securityUtil;
 
     @Override
-    public AddCartResultVO addCart(Integer productId, Integer quantity) {
-
+    public AddCartResultVO addCart(String productId, Integer quantity) {
         Account currentUser = securityUtil.getCurrentUser();
         if (currentUser == null) {
             throw TomatoMallException.notLogin();
         }
-        System.out.println("11111111111111111111111111111111111");
-        Product product = productRepository.findById(productId)
+        if (currentUser.getId() == null) {
+            throw  TomatoMallException.invalidUserId();
+        }
+        Product product = productRepository.findById(Integer.valueOf(productId))
                 .orElseThrow(TomatoMallException::ProductNotFound);
-        System.out.println("2222222222222222222222222222222222222");
-        System.out.println(currentUser.getId() + " " + productId + " " + quantity);
-        Carts existingCartItem = cartsRepository.
-                findByUserIdAndProductId(currentUser.getId(), productId);
+        Carts existingCartItem = cartsRepository.findByAccountAndProduct(
+                currentUser,
+                product
+        );
+        Integer stock=product.getAmount();
+        if(stock==null||stock==0){
+            throw TomatoMallException.productSoldOut();
+        }
+        if(stock < quantity) {
+            throw TomatoMallException.notEnoughStock();
+        }
 
-        System.out.println("333333333333333333333333333333333333333333333");
         if (existingCartItem != null) {
-            System.out.println(111);
             existingCartItem.setQuantity(existingCartItem.getQuantity() + quantity);
             cartsRepository.save(existingCartItem);
         }else{
-            System.out.println(222);
             Carts carts = new Carts();
-            carts.setProductId(productId);
+            carts.setAccount(currentUser);
+            carts.setProduct(product);
             carts.setQuantity(quantity);
-            carts.setUserId(currentUser.getId());
-            System.out.println("55555555555555555555555555555555555555555555");
             cartsRepository.save(carts);
-            System.out.println("6666666666666666666666666666666666666666666666");
             existingCartItem = carts;
         }
-
-        System.out.println("44444444444444444444444444444444444444444444");
         AddCartResultVO resultVO = new AddCartResultVO();
-        resultVO.setCartItemId(existingCartItem.getCartItemId());
+        resultVO.setCartItemId(String.valueOf(existingCartItem.getCartItemId()));
         resultVO.setProductId(productId);
         resultVO.setTitle(product.getTitle());
         resultVO.setPrice(product.getPrice());
@@ -70,17 +74,91 @@ public class CartsServiceImpl implements CartsService {
     }
 
     @Override
-    public Boolean deleteCart(Integer productId) {
+    public Boolean deleteCart(String productId) {
+        Account currentUser = securityUtil.getCurrentUser();
+        if (currentUser == null) {
+            throw TomatoMallException.notLogin();
+        }
+        if (currentUser.getId() == null) {
+            throw TomatoMallException.invalidUserId();
+        }
+        Product product=productRepository.findById(Integer.valueOf(productId))
+                .orElseThrow(TomatoMallException::ProductNotFound);
+        Carts cartItem=cartsRepository.findByAccountAndProduct(
+                currentUser,
+                product
+        );
+        if(cartItem==null){
+            throw TomatoMallException.cartItemNotFound();
+        }
+        cartsRepository.delete(cartItem);
         return true;
     }
 
     @Override
-    public Boolean updateCart(Integer productId, Integer quantity) {
+    public Boolean updateCart(String cartItemId, Integer quantity) {
+        Account currentUser=securityUtil.getCurrentUser();
+        if (currentUser == null) {
+            throw TomatoMallException.notLogin();
+        }
+        if (currentUser.getId() == null) {
+            throw TomatoMallException.invalidUserId();
+        }
+        Product product=productRepository.findById(Integer.valueOf(cartItemId))
+                .orElseThrow(TomatoMallException::ProductNotFound);
+        Carts cartItem=cartsRepository.findByAccountAndProduct(
+                currentUser,
+                product
+        );
+        if(cartItem==null){
+            throw TomatoMallException.cartItemNotFound();
+        }
+        Integer stock=product.getAmount();
+        if(stock==null||stock==0){
+            throw TomatoMallException.productSoldOut();
+        }
+        if(stock<quantity){
+            throw TomatoMallException.notEnoughStock();
+        }
+        cartItem.setQuantity(quantity);
+        cartsRepository.save(cartItem);
         return true;
     }
 
     @Override
-    public List<AddCartResultVO> getCart() {
-        return null;
+    public CartResultVO getCart() {
+        Account currentUser = securityUtil.getCurrentUser();
+        if (currentUser == null) {
+            throw TomatoMallException.notLogin();
+        }
+        List<Carts> cartItems = cartsRepository.findByAccount(currentUser);
+        if (cartItems == null) {
+            throw TomatoMallException.getItemListFailed();
+        }
+        List<AddCartResultVO> result = new ArrayList<>();
+        double totalAmount = 0;
+        int total = 0;
+        for (Carts cartItem : cartItems) {
+            Product product = productRepository.findById(cartItem.getProduct().getId())
+                    .orElseThrow(TomatoMallException::ProductNotFound);
+            AddCartResultVO item = new AddCartResultVO();
+            item.setCartItemId(String.valueOf(cartItem.getCartItemId()));
+            item.setProductId(String.valueOf(cartItem.getProduct().getId()));
+            item.setTitle(product.getTitle());
+            item.setPrice(product.getPrice());
+            item.setDescription(product.getDescription());
+            item.setQuantity(cartItem.getQuantity());
+            item.setCover(product.getCover());
+
+            result.add(item);
+            totalAmount += cartItem.getQuantity()*product.getPrice();
+            total ++;
+        }
+
+        CartResultVO cartResult = new CartResultVO();
+        cartResult.setItems(result);
+        cartResult.setTotalAmount(totalAmount);
+        cartResult.setTotal(total);
+        return cartResult;
     }
 }

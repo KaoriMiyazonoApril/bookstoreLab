@@ -40,7 +40,15 @@ public class TomatoMallException extends RuntimeException {
     public static TomatoMallException phoneAlreadyExists(){return new TomatoMallException("手机号已存在，请使用其他手机号注册");}
 
     public static TomatoMallException ossError(){return new TomatoMallException("oss服务出现异常");}
-    public static TomatoMallException InvaildProductAmount(){return new TomatoMallException("商品数量不合法");}
 
-    public static TomatoMallException CartsNotFound(){return new TomatoMallException("购物车不存在");}
+    public static TomatoMallException notEnoughStock(){return new TomatoMallException("库存不足");}
+
+    public static TomatoMallException invalidUserId(){return new TomatoMallException("用户ID不合法");}
+
+    public static TomatoMallException productSoldOut(){return new TomatoMallException("商品已售罄");}
+
+    public static TomatoMallException cartItemNotFound(){return new TomatoMallException("购物车中未找到对应的商品项");}
+
+    public static TomatoMallException getItemListFailed(){return new TomatoMallException("获取购物车商品项列表失败");}
+
 }

@@ -21,7 +21,7 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-
+    @Override
     public Boolean register(AccountVO accountVO) {
         Account account = accountRepository.findByUsername(accountVO.getUsername());
         if (account != null) {
@@ -32,13 +32,7 @@ public class AccountServiceImpl implements AccountService {
         accountRepository.save(newUser);
         return true;
     }
-    /*
-    @Override
-    public AccountVO getInformation() {
-        Account user=securityUtil.getCurrentUser();
-        return user.toVO();
-    }
-    */
+
     @Override
     public AccountVO getUserByUsername(String username) {
         Account account = accountRepository.findByUsername(username);
@@ -50,6 +44,8 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public String login(String username, String pwd) {
+        if(username==null || pwd==null)
+            throw TomatoMallException.NoEnoughArguments();
         Account ac = accountRepository.findByUsername(username);
         if (ac == null) {
             throw TomatoMallException.WrongUsername();
@@ -76,7 +72,7 @@ public class AccountServiceImpl implements AccountService {
             ac.setAvatar(avatar);
         }
         if (telephone != null) {
-            ac.setPhone(telephone);
+            ac.setTelephone(telephone);
         }
         if (email != null) {
             ac.setEmail(email);

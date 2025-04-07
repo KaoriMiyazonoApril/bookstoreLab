@@ -9,12 +9,13 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name = "product")
+@Table(name = "products")
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 public class Product {
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "id")

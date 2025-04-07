@@ -14,7 +14,7 @@ import java.io.IOException;
 @RequestMapping("/api")
 
 public class ImageController {
-    @PostMapping("/image")
+    @PostMapping("/images")
     public Response uploadPicture(@RequestParam("pic") MultipartFile pic){
         //创建商店到数据库中
         OssService o=new OssService();

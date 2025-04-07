@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import javax.persistence.*;
 
-@Table(name = "account")
+@Table(name = "users")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -27,8 +27,8 @@ public class Account {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "phone")
-    private String phone;
+    @Column(name = "telephone")
+    private String telephone;
 
     @Column(name = "name")
     private String name;
@@ -48,7 +48,7 @@ public class Account {
         accountVO.setUsername(this.username);
         accountVO.setPassword(this.password);
         accountVO.setEmail(this.email);
-        accountVO.setPhone(this.phone);
+        accountVO.setTelephone(this.telephone);
         accountVO.setLocation(this.location);
         accountVO.setName(this.name);
         accountVO.setAvatar(this.avatar);

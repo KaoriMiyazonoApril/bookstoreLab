@@ -1,30 +1,3 @@
-/*package com.example.tomatomall.util;
-
-import com.example.tomatomall.po.Account;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-
-
-import javax.servlet.http.HttpServletRequest;
-
-@Configuration
-public class SecurityUtil {
-
-    @Autowired
-    HttpServletRequest httpServletRequest;
-
-    public Account getCurrentUser(){
-        return (Account)httpServletRequest.getSession().getAttribute("currentAccount" );
-    }
-
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-}*/
 package com.example.tomatomall.util;
 
 import com.example.tomatomall.po.Account;

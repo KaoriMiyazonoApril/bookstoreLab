@@ -1,0 +1,15 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "result": {
+    "id": 3,
+    "username": "test3",
+    "password": "$2a$10$0kKnyPlvbfH7o25QjcUS3OsqnILqDTBgNVYTqtJWQpKsbaCUcyV92",
+    "telephone": "15236610780",
+    "name": "123",
+    "email": "123@123",
+    "location": "123",
+    "role": "CUSTOMER",
+    "avatar": "5555"
+  }
+}

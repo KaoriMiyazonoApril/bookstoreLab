@@ -12,7 +12,7 @@ public class AccountVO {
     private Integer id;
     private String username;
     private String password;
-    private String phone;
+    private String telephone;
     private String name;
     private String email;
     private String location;
@@ -24,7 +24,7 @@ public class AccountVO {
         account.setId(this.id);
         account.setName(this.name);
         account.setEmail(this.email);
-        account.setPhone(this.phone);
+        account.setTelephone(this.telephone);
         account.setLocation(this.location);
         account.setAvatar(this.avatar);
         account.setPassword(this.password);

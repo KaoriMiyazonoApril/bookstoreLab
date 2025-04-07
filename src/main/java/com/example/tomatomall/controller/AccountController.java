@@ -37,23 +37,15 @@ public class AccountController {
      */
     @PutMapping()
     // 在更新方法中添加role参数
-    public Response updateUser(@RequestParam(required = true,name="username") String username,
-                             @RequestParam(required = false,name="password") String password,
-                             @RequestParam(required = false,name="name") String name,
-                             @RequestParam(required = false,name="avatar") String avatar,
-                             @RequestParam(required = false,name="telephone") String telephone,
-                             @RequestParam(required = false,name="email") String email,
-                             @RequestParam(required = false,name="location") String location,
-                             @RequestParam(required = false,name="role") String role) {
-
-        return Response.buildSuccess(accountService.update(username,password,name,avatar,telephone,email,location));
+    public Response updateUser(@RequestBody AccountVO a) {
+        return Response.buildSuccess(accountService.update(a.getUsername(), a.getPassword(), a.getName(), a.getAvatar(), a.getTelephone(), a.getEmail(), a.getLocation()));
     }
 
     /**
      * 登录
      */
     @PostMapping("/login")
-    public Response login(@RequestParam(required=true,name="username") String username,@RequestParam(required = true,name="password") String password) {
-        return Response.buildSuccess(accountService.login(username,password));
+    public Response login(@RequestBody AccountVO a) {
+        return Response.buildSuccess(accountService.login(a.getUsername(), a.getPassword()));
     }
 }

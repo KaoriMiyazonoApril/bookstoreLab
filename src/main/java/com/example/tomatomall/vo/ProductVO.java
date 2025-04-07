@@ -1,7 +1,6 @@
 package com.example.tomatomall.vo;
 import com.example.tomatomall.po.Account;
 import com.example.tomatomall.po.Product;
-import com.example.tomatomall.util.ProductSet;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -16,7 +15,7 @@ public class ProductVO {
     private String title,description,cover,detail;
     private Double price;
     private Float rate;
-    public ProductSet specifications;
+    private String item,value;
 
     public Product toPO(){
         Product p=new Product();
@@ -27,9 +26,10 @@ public class ProductVO {
         p.setDetail(this.detail);
         p.setPrice(this.price);
         p.setRate(this.rate);
-        p.setSpecifications(this.specifications);
         p.setFrozen(this.frozen);
         p.setAmount(this.amount);
+        p.setItem(this.item);
+        p.setValue(this.value);
         return p;
     }
 }

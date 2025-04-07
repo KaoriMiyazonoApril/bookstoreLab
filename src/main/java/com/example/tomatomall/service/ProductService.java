@@ -3,7 +3,6 @@ package com.example.tomatomall.service;
 import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.po.Product;
 import com.example.tomatomall.repository.ProductRepository;
-import com.example.tomatomall.util.ProductSet;
 import com.example.tomatomall.vo.ProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,9 +22,6 @@ public class ProductService {
         List<ProductVO> ans=new ArrayList<>();
 
         for(Product tem:ls){
-            if(tem.specifications!=null){
-                tem.specifications.productId= tem.getId();
-            }
             ans.add(tem.toVO());
         }
         return ans;
@@ -33,9 +29,6 @@ public class ProductService {
 
     public ProductVO getProduct(Integer id){
         Product p=productRepository.findById(id).get();
-        if(p.getSpecifications()!=null){
-            p.specifications.productId=p.getId();
-        }
         return p.toVO();
     }
 
@@ -51,9 +44,8 @@ public class ProductService {
 
     public Boolean createProduct(String title, Double price, Float rate, String description, String cover, String detail, String item, String value
     ){
-        Product tem=productRepository.findByTitle(title);
-        if(tem!=null)
-            throw TomatoMallException.DuplicateProduct();
+        if(title==null || price==null ||rate==null)
+            throw TomatoMallException.NoEnoughArguments();
         Product p=new Product();
         p.setTitle(title);
         p.setPrice(price);
@@ -64,22 +56,22 @@ public class ProductService {
             p.setCover(cover);
         if(detail!=null)
             p.setDetail(detail);
-        if(item !=null && value !=null){
-            ProductSet t=new ProductSet(item,value,0);//不能得知插入数据库时候的编号
-            p.setSpecifications(t);
+        if(item !=null && value!=null){
+            p.setItem(item);
+            p.setValue(value);
         }
         productRepository.save(p);
         return true;
     }
 
-    public Boolean updateProduct(String title, Double price, Float rate, String description, String cover, String detail, String item, String value){
-        Product p=productRepository.findByTitle(title);
-        if(p==null) {
-            throw TomatoMallException.ProductNotFound();
-        }
-
-        p.setPrice(price);
-        p.setRate(rate);
+    public Boolean updateProduct(Integer id, String title, Double price, Float rate, String description, String cover, String detail, String item, String value){
+        Product p=productRepository.findById(id).get();
+        if(title!=null)
+            p.setTitle(title);
+        if(price!=null)
+            p.setPrice(price);
+        if(rate!=null)
+            p.setRate(rate);
         if(description!=null)
             p.setDescription(description);
         if(cover!=null)
@@ -87,16 +79,19 @@ public class ProductService {
         if(detail!=null)
             p.setDetail(detail);
         if(item !=null && value !=null){
-            ProductSet t=new ProductSet(item,value,0);//不能得知插入数据库时候的编号
-            p.setSpecifications(t);
+            p.setItem(item);
+            p.setValue(value);
         }
         productRepository.save(p);
         return true;
     }
 
     public Boolean updateAmount(Integer id,Integer amount){
+        if(amount<0)
+            throw TomatoMallException.InvaildProductAmount();
         Product p=productRepository.findById(id).get();
         p.setAmount(amount);
+        productRepository.save(p);
         return true;
     }
 }

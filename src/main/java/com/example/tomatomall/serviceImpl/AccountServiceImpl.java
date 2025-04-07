@@ -50,11 +50,12 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public String login(String username, String pwd) {
-        Account ac = accountRepository.findByUsername(username);
-        if (ac == null) {
-            throw TomatoMallException.WrongUsername();
-        }
+        if(username==null || pwd==null)
+            throw TomatoMallException.NoEnoughArguments();
 
+        Account ac = accountRepository.findByUsername(username);
+        if (ac == null)
+            throw TomatoMallException.WrongUsername();
         // 使用matches方法验证密码
         if (!passwordEncoder.matches(pwd, ac.getPassword())) {
             throw TomatoMallException.WrongPassword();
@@ -65,6 +66,8 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Boolean update(String username, String password, String name, String avatar, String telephone, String email, String location) {
+        if(username==null)
+            throw TomatoMallException.NoEnoughArguments();
         Account ac = accountRepository.findByUsername(username);
         if (ac == null) {
             throw TomatoMallException.WrongUsername();

@@ -13,7 +13,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/api/accounts", "/api/accounts/login","/api/accounts/*").permitAll()
+                .antMatchers("/api/accounts", "/api/accounts/login","/api/accounts/*","/images","/api/products","/api/products/*").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .csrf().disable()

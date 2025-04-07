@@ -1,6 +1,5 @@
 package com.example.tomatomall.po;
 
-import com.example.tomatomall.util.ProductSet;
 import com.example.tomatomall.vo.ProductVO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -38,15 +37,17 @@ public class Product {
     @Column(name = "detail")
     private String detail;
 
-    @Embedded
-    @Column(name="specifications")
-    public ProductSet specifications;
-
     @Column(name="amount")
     private Integer amount;
 
     @Column(name="frozen")
     private Integer frozen;
+
+    @Column(name="item")
+    private String item;
+
+    @Column(name="value")
+    private String value;
 
     public ProductVO toVO(){
         ProductVO p=new ProductVO();
@@ -57,7 +58,8 @@ public class Product {
         p.setDescription(this.description);
         p.setCover(this.cover);
         p.setDetail(this.detail);
-        p.setSpecifications(this.specifications);
+        p.setItem(this.item);
+        p.setValue(this.value);
         p.setFrozen(this.frozen);
         p.setAmount(this.amount);
         return p;

@@ -2,7 +2,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/bookstore?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: miyazono_11-4
+    password: 123456
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,18 +17,18 @@ server:
 
 aliyun:
   oss:
-    endpoint: ${ALIYUN_OSS_ENDPOINT:oss-cn-nanjing.aliyuncs.com}
-    access-key-id: ${ALIYUN_ACCESS_KEY_ID:}
-    access-key-secret: ${ALIYUN_ACCESS_SECRET:}
-    bucket-name: ${ALIYUN_BUCKET_NAME:}
+    endpoint: oss-cn-nanjing.aliyuncs.com
+    access-key-id: LTAI5tR63tGWE8SFnqKtCGEQ
+    access-key-secret: TnD44Rkhocf6svy3FOkCQDUaQVJ0Gx
+    bucket-name: wwhyiyun
 
 
 alipay:
-  app-id: APPID
+  app-id:
   private-key:
   alipay-public-key:
-  server-url: https://openapi-sandbox.dl.alipaydev.com/gateway.do
-  charset: utf-8
-  sign-type: RSA2
-  notify-url:  http://mkcaa9.natappfree.cc/alipay/notify(填写你的地址+/alipay/notify)
-  return-url:  http://mkcaa9.natappfree.cc/alipay/returnUrl(支付成功回调的地址)
+  server-url:
+  charset:
+  sign-type:
+  notify-url:
+  return-url:

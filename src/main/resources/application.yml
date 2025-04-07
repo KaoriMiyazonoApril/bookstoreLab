@@ -17,10 +17,10 @@ server:
 
 aliyun:
   oss:
-    endpoint: oss-cn-nanjing.aliyuncs.com
-    access-key-id: LTAI5tR63tGWE8SFnqKtCGEQ
-    access-key-secret: TnD44Rkhocf6svy3FOkCQDUaQVJ0Gx
-    bucket-name: wwhyiyun
+    endpoint:
+    access-key-id:
+    access-key-secret:
+    bucket-name:
 
 
 alipay:

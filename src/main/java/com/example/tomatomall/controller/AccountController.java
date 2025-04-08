@@ -5,8 +5,7 @@ import com.example.tomatomall.vo.AccountVO;
 import com.example.tomatomall.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/api/accounts")
@@ -26,9 +25,8 @@ public class AccountController {
     /**
      * 创建新的用户
      */
-    // 在注册方法中添加role参数
     @PostMapping()
-    public Response<Boolean> createUser(@RequestBody AccountVO accountVO) {
+    public Response<String> createUser(@Valid @RequestBody AccountVO accountVO) {
         return Response.buildSuccess(accountService.register(accountVO));
     }
 

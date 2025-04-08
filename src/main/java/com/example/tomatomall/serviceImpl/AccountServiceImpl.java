@@ -22,7 +22,7 @@ public class AccountServiceImpl implements AccountService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public Boolean register(AccountVO accountVO) {
+    public String register(AccountVO accountVO) {
         Account account = accountRepository.findByUsername(accountVO.getUsername());
         if (account != null) {
             throw TomatoMallException.DuplicateName();
@@ -30,7 +30,7 @@ public class AccountServiceImpl implements AccountService {
         Account newUser = accountVO.toPO();
         newUser.setPassword(passwordEncoder.encode(accountVO.getPassword()));
         accountRepository.save(newUser);
-        return true;
+        return "注册成功";
     }
 
     @Override

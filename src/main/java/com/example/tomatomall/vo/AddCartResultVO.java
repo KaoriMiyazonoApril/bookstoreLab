@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+// 用于添加购物车的返回体
 @Getter
 @Setter
 @NoArgsConstructor

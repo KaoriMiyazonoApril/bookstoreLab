@@ -28,6 +28,7 @@ public class CartsServiceImpl implements CartsService {
     @Autowired
     private SecurityUtil securityUtil;
 
+    // 新增商品到当前用户购物车
     @Override
     public AddCartResultVO addCart(String productId, Integer quantity) {
         Account currentUser = securityUtil.getCurrentUser();
@@ -73,6 +74,7 @@ public class CartsServiceImpl implements CartsService {
         return resultVO;
     }
 
+    // 从当前用户购物车删除商品
     @Override
     public Boolean deleteCart(String productId) {
         Account currentUser = securityUtil.getCurrentUser();
@@ -95,6 +97,7 @@ public class CartsServiceImpl implements CartsService {
         return true;
     }
 
+    // 更新购物车商品数量
     @Override
     public Boolean updateCart(String cartItemId, Integer quantity) {
         Account currentUser=securityUtil.getCurrentUser();
@@ -125,6 +128,7 @@ public class CartsServiceImpl implements CartsService {
         return true;
     }
 
+    // 获取当前用户购物车
     @Override
     public CartResultVO getCart() {
         Account currentUser = securityUtil.getCurrentUser();

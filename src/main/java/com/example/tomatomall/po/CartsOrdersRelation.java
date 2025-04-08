@@ -29,7 +29,6 @@ public class CartsOrdersRelation {
     @JoinColumn(name = "order_id", referencedColumnName = "orderId", insertable = false, updatable = false)
     private Orders order;
 
-
     @Column(name = "order_id")
     private Integer orderId;
 }

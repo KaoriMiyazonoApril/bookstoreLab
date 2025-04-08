@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import java.util.List;
 
+// 用于请求当前用户购物车的所有商品的返回体
 @Getter
 @Setter
 @NoArgsConstructor

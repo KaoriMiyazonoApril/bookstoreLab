@@ -18,9 +18,9 @@ server:
 aliyun:
   oss:
     endpoint: ${ALIYUN_OSS_ENDPOINT:oss-cn-nanjing.aliyuncs.com}
-    access-key-id: ${ALIYUN_ACCESS_KEY_ID:LTAI5tR63tGWE8SFnqKtCGEQ}
-    access-key-secret: ${ALIYUN_ACCESS_SECRET:TnD44Rkhocf6svy3FOkCQDUaQVJ0Gx}
-    bucket-name: ${ALIYUN_BUCKET_NAME:wwhyiyun}
+    access-key-id: ${ALIYUN_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_ACCESS_SECRET:}
+    bucket-name: ${ALIYUN_BUCKET_NAME:}
 
 alipay:
   app-id: APPID

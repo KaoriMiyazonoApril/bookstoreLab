@@ -78,6 +78,9 @@ public class ProductService {
 
         productAmountRepository.save(new ProductAmount(tem.getId(),0,0));
 
+        if(p.getSpecifications()==null)
+            return true;
+
         for(SpecificationVO s:p.getSpecifications()){
             Specification sp=s.toPO();
             sp.setProductId(tem.getId());
@@ -91,7 +94,7 @@ public class ProductService {
         if(p.getId()==null)
             throw TomatoMallException.NoEnoughArguments();
 
-        Product tem=productRepository.findById(Integer.parseInt(p.getId())).get();
+        Product tem=productRepository.findById(Integer.valueOf(p.getId())).get();
 
         if(p.getTitle()!=null)
             tem.setTitle(p.getTitle());
@@ -107,7 +110,7 @@ public class ProductService {
             tem.setDetail(p.getDetail());
 
         productRepository.save(tem);
-        for(Specification s:specificationRepository.findByProductId(Integer.parseInt(p.getId()))){
+        for(Specification s:specificationRepository.findByProductId(Integer.valueOf(p.getId()))){
             specificationRepository.delete(s);
         }
         for(SpecificationVO s:p.getSpecifications()){
@@ -116,7 +119,7 @@ public class ProductService {
         return true;
     }
 
-    public Boolean updateAmount(Integer id,Integer amount){//完成
+    public Boolean updateAmount(Integer id,Integer amount) {//完成
         if(amount<0)
             throw TomatoMallException.InvaildProductAmount();
         ProductAmount p=productAmountRepository.findByProductId(id);

@@ -1,11 +1,11 @@
 package com.example.tomatomall.service;
 
-import com.example.tomatomall.vo.AddCartResultVO;
-import com.example.tomatomall.vo.CartResultVO;
+import com.example.tomatomall.RRVO.AddCartResultVO;
+import com.example.tomatomall.RRVO.CartResultVO;
 
 public interface CartsService {
     AddCartResultVO addCart(String productId, Integer quantity);
-    Boolean deleteCart(String productId);
+    String deleteCart(String productId);
     Boolean updateCart(String cartItemId, Integer quantity);
     CartResultVO getCart();
 }

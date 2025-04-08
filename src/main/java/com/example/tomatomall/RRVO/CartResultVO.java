@@ -1,4 +1,4 @@
-package com.example.tomatomall.vo;
+package com.example.tomatomall.RRVO;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

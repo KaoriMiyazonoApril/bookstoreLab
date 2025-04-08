@@ -8,7 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.Set;
 
-@Table(name = "product")
+@Table(name = "products")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -39,7 +39,7 @@ public class Product {
 
     public ProductVO toVO(){
         ProductVO p=new ProductVO();
-        p.setId(this.id.toString());
+        p.setId(String.valueOf(this.id));
         p.setPrice(this.price);
         p.setRate(this.rate);
         p.setTitle(this.title);
@@ -49,4 +49,5 @@ public class Product {
 
         return p;
     }
+
 }

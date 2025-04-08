@@ -1,5 +1,9 @@
 package com.example.tomatomall.controller;
 
+import com.example.tomatomall.RRVO.AddCartRequestVO;
+import com.example.tomatomall.RRVO.AddCartResultVO;
+import com.example.tomatomall.RRVO.CartResultVO;
+import com.example.tomatomall.RRVO.ReviseCartRequestVO;
 import com.example.tomatomall.service.CartsService;
 import com.example.tomatomall.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +19,23 @@ public class CartsController {
     //将商品添加至当前用户的购物车
     @PostMapping
     public Response<AddCartResultVO> addCart(@RequestBody AddCartRequestVO request) {
-        return Response.buildSuccess(cartsService.
+        Response<AddCartResultVO> response = Response.buildSuccess(cartsService.
                 addCart(request.getProductId(), request.getQuantity()));
+        response.setMsg(null);
+        return response;
     }
 
     //从当前用户的购物车中删除指定的商品
     @DeleteMapping("/{cartItemId}")
-    public Response<Boolean> deleteCart(@PathVariable String cartItemId) {
-        return Response.buildSuccess(cartsService.deleteCart(cartItemId));
+    public Response<String> deleteCart(@PathVariable String cartItemId) {
+        Response<String> response = Response.buildSuccess(cartsService.deleteCart(cartItemId));
+        if(response.getData()==null){
+            response.setCode("400");
+            response.setMsg("购物车商品不存在");
+            return response;
+        }
+        response.setMsg(null);
+        return response;
     }
 
     //修改当前用户的购物车中指定商品的数量

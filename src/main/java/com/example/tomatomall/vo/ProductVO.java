@@ -18,7 +18,9 @@ public class ProductVO {
 
     public Product toPO(){
         Product p=new Product();
-        p.setId(Integer.parseInt(this.id));
+        if (this.id != null && !this.id.isEmpty()) {
+            p.setId(Integer.valueOf(this.id));
+        }
         p.setTitle(this.title);
         p.setDescription(this.description);
         p.setCover(this.cover);

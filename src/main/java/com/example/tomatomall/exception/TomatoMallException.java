@@ -51,4 +51,7 @@ public class TomatoMallException extends RuntimeException {
 
     public static TomatoMallException getItemListFailed(){return new TomatoMallException("获取购物车商品项列表失败");}
 
+    public static TomatoMallException InvaildProductAmount() {
+        return new TomatoMallException("商品数量不合法");
+    }
 }

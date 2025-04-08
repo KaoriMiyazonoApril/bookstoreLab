@@ -4,10 +4,12 @@ import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.po.Account;
 import com.example.tomatomall.po.Carts;
 import com.example.tomatomall.po.Product;
+import com.example.tomatomall.repository.AccountRepository;
 import com.example.tomatomall.service.CartsService;
+import com.example.tomatomall.service.ProductService;
 import com.example.tomatomall.util.SecurityUtil;
-import com.example.tomatomall.vo.AddCartResultVO;
-import com.example.tomatomall.vo.CartResultVO;
+import com.example.tomatomall.RRVO.AddCartResultVO;
+import com.example.tomatomall.RRVO.CartResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.example.tomatomall.repository.CartsRepository;
 import com.example.tomatomall.repository.ProductRepository;
@@ -28,6 +30,9 @@ public class CartsServiceImpl implements CartsService {
     @Autowired
     private SecurityUtil securityUtil;
 
+    @Autowired
+    private ProductService productService;
+
     // 新增商品到当前用户购物车
     @Override
     public AddCartResultVO addCart(String productId, Integer quantity) {
@@ -44,7 +49,8 @@ public class CartsServiceImpl implements CartsService {
                 currentUser,
                 product
         );
-        Integer stock=product.getAmount();
+        Integer stock=productService.getAmount(product.getId());
+        System.out.println(stock+"   111111111111111111111111111111111111111");
         if(stock==null||stock==0){
             throw TomatoMallException.productSoldOut();
         }
@@ -53,6 +59,9 @@ public class CartsServiceImpl implements CartsService {
         }
 
         if (existingCartItem != null) {
+            if(stock < existingCartItem.getQuantity()+quantity){
+                throw TomatoMallException.notEnoughStock();
+            }
             existingCartItem.setQuantity(existingCartItem.getQuantity() + quantity);
             cartsRepository.save(existingCartItem);
         }else{
@@ -76,7 +85,7 @@ public class CartsServiceImpl implements CartsService {
 
     // 从当前用户购物车删除商品
     @Override
-    public Boolean deleteCart(String productId) {
+    public String deleteCart(String productId) {
         Account currentUser = securityUtil.getCurrentUser();
         if (currentUser == null) {
             throw TomatoMallException.notLogin();
@@ -91,10 +100,10 @@ public class CartsServiceImpl implements CartsService {
                 product
         );
         if(cartItem==null){
-            throw TomatoMallException.cartItemNotFound();
+            return null;
         }
         cartsRepository.delete(cartItem);
-        return true;
+        return "删除成功";
     }
 
     // 更新购物车商品数量
@@ -116,7 +125,7 @@ public class CartsServiceImpl implements CartsService {
         if(cartItem==null){
             throw TomatoMallException.cartItemNotFound();
         }
-        Integer stock=product.getAmount();
+        Integer stock=productService.getAmount(product.getId());
         if(stock==null||stock==0){
             throw TomatoMallException.productSoldOut();
         }

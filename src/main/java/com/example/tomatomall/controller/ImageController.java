@@ -15,12 +15,10 @@ import java.io.IOException;
 
 public class ImageController {
     @PostMapping("/images")
-    public Response uploadPicture(@RequestParam("pic") MultipartFile pic){
+    public Response uploadPicture(@RequestParam("pic") MultipartFile pic) throws IOException {
         //创建商店到数据库中
         OssService o=new OssService();
-        try {return Response.buildSuccess(o.upload(pic,""));}
-        catch (TomatoMallException | IOException e){
-            throw TomatoMallException.ossError();
-        }
+        return Response.buildSuccess(o.upload(pic,""));
+
     }
 }

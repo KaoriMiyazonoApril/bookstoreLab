@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -28,13 +30,13 @@ public class ProductController {
     }
 
     @PutMapping()
-    public Response updateProduct(@RequestParam(required = true, name = "title") String title, @RequestParam(required = true, name = "price") Double price, @RequestParam(required = true, name = "rate") Float rate, @RequestParam(required = false, name = "description") String description, @RequestParam(required = false, name = "cover") String cover, @RequestParam(required = false, name = "detail") String detail, @RequestParam(required = false, name = "item") String item, @RequestParam(required = false, name = "value") String value){
-        return Response.buildSuccess(productService.updateProduct(title, price,rate, description, cover, detail,item, value));
+    public Response updateProduct(@RequestBody ProductVO p){
+        return Response.buildSuccess(productService.updateProduct(p));
     }
 
     @PostMapping()
-    public Response createProduct(@RequestParam(required = true, name = "title") String title, @RequestParam(required = true, name = "price") Double price, @RequestParam(required = true, name = "rate") Float rate, @RequestParam(required = false, name = "description") String description, @RequestParam(required = false, name = "cover") String cover, @RequestParam(required = false, name = "detail") String detail, @RequestParam(required = false, name = "item") String item, @RequestParam(required = false, name = "value") String value){
-        return Response.buildSuccess(productService.createProduct(title, price,rate, description, cover, detail,item, value));
+    public Response createProduct(@RequestBody ProductVO p){
+        return Response.buildSuccess(productService.createProduct(p));
     }
 
     @DeleteMapping("/{id}")

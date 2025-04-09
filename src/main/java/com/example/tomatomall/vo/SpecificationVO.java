@@ -1,10 +1,12 @@
 package com.example.tomatomall.vo;
 
 import com.example.tomatomall.po.Specification;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Data
 @Getter
 @Setter
 @NoArgsConstructor

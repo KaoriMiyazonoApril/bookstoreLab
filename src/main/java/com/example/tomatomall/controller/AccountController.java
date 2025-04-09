@@ -28,7 +28,7 @@ public class AccountController {
      */
     // 在注册方法中添加role参数
     @PostMapping()
-    public Response<Boolean> createUser(@RequestBody AccountVO accountVO) {
+    public Response createUser(@RequestBody AccountVO accountVO) {
         return Response.buildSuccess(accountService.register(accountVO));
     }
 

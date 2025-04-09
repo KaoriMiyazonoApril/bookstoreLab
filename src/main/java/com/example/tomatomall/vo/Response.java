@@ -14,7 +14,7 @@ public class Response<T> implements Serializable {
 
     private String msg;
 
-    private T result;
+    private T data;
 
     public static <T> Response<T> buildSuccess(T result) {
         return new Response<T>("200", "请求成功", result);

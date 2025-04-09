@@ -6,7 +6,7 @@ import com.example.tomatomall.vo.AccountVO;
 
 public interface AccountService {
 
-    Boolean register(AccountVO accountVO);
+    String register(AccountVO accountVO);
     AccountVO getUserByUsername(String username);
     //AccountVO getInformation();
 

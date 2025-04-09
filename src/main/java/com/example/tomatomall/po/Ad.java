@@ -1,5 +1,6 @@
 package com.example.tomatomall.po;
 
+import com.example.tomatomall.vo.AdVO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,4 +29,14 @@ public class Ad {
 
     @Column(name="product_id")
     private Integer productId;//作为外键,后续记得要修改
+
+    public AdVO toVO(){
+        AdVO a=new AdVO();
+        a.setId(id.toString());
+        a.setTitle(this.title);
+        a.setContent(this.content);
+        a.setImgUrl(this.image);
+        a.setProductId(productId.toString());
+        return a;
+    }
 }

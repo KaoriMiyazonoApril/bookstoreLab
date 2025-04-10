@@ -7,6 +7,7 @@ import com.example.tomatomall.po.Specification;
 import com.example.tomatomall.repository.ProductAmountRepository;
 import com.example.tomatomall.repository.ProductRepository;
 import com.example.tomatomall.repository.SpecificationRepository;
+import com.example.tomatomall.vo.ProductAmountVO;
 import com.example.tomatomall.vo.ProductVO;
 import com.example.tomatomall.vo.SpecificationVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,48 +54,46 @@ public class ProductService {
         return p;
     }
 
-    public Integer getAmount(Integer id){//完成了
+    public ProductAmountVO getAmount(Integer id){//完成了
         ProductAmount p=productAmountRepository.findByProductId(id);
         if(p==null){
             throw TomatoMallException.ProductNotFound();
         }
-        return p.getAmount();
+        return p.toVO();
     }
 
-    public Boolean deleteProduct(Integer id){//完成了
+    public String deleteProduct(Integer id){//完成了
         productRepository.delete(productRepository.findById(id).get());
         productAmountRepository.delete(productAmountRepository.findByProductId(id));
 
         for(Specification tem:specificationRepository.findByProductId(id))
             specificationRepository.delete(tem);
-        return true;
+        return "删除成功";
     }
 
-    public Boolean createProduct(ProductVO p){//完成了
+    public ProductVO createProduct(ProductVO p){//完成了
         if(p.getTitle() ==null || p.getPrice() ==null || p.getRate() ==null)
             throw TomatoMallException.NoEnoughArguments();
         Product tem=p.toPO();
         productRepository.save(tem);//据说这时候id就有了
-
+        System.out.println(tem.getId());
         productAmountRepository.save(new ProductAmount(tem.getId(),0,0));
-
-        if(p.getSpecifications()==null)
-            return true;
-
-        for(SpecificationVO s:p.getSpecifications()){
-            Specification sp=s.toPO();
-            sp.setProductId(tem.getId());
-            specificationRepository.save(sp);
+        if(p.getSpecifications()!=null){
+            for(SpecificationVO s:p.getSpecifications()){
+                Specification sp=s.toPO();
+                sp.setProductId(tem.getId());
+                specificationRepository.save(sp);
+            }
         }
-
-        return true;
+        p.setId(tem.getId().toString());
+        return p;
     }
 
-    public Boolean updateProduct(ProductVO p) {//完成了
+    public String updateProduct(ProductVO p) {//完成了
         if(p.getId()==null)
             throw TomatoMallException.NoEnoughArguments();
 
-        Product tem=productRepository.findById(Integer.valueOf(p.getId())).get();
+        Product tem=productRepository.findById(Integer.parseInt(p.getId())).get();
 
         if(p.getTitle()!=null)
             tem.setTitle(p.getTitle());
@@ -110,16 +109,17 @@ public class ProductService {
             tem.setDetail(p.getDetail());
 
         productRepository.save(tem);
-        for(Specification s:specificationRepository.findByProductId(Integer.valueOf(p.getId()))){
+        for(Specification s:specificationRepository.findByProductId(Integer.parseInt(p.getId()))){
             specificationRepository.delete(s);
         }
-        for(SpecificationVO s:p.getSpecifications()){
-            specificationRepository.save(s.toPO());
-        }
-        return true;
+        if(p.getSpecifications()!=null)
+            for(SpecificationVO s:p.getSpecifications()){
+                specificationRepository.save(s.toPO());
+            }
+        return "更新成功";
     }
 
-    public Boolean updateAmount(Integer id,Integer amount) {//完成
+    public String updateAmount(Integer id,Integer amount){//完成
         if(amount<0)
             throw TomatoMallException.InvaildProductAmount();
         ProductAmount p=productAmountRepository.findByProductId(id);
@@ -127,7 +127,7 @@ public class ProductService {
             throw TomatoMallException.ProductNotFound();
         p.setAmount(amount);
         productAmountRepository.save(p);
-        return true;
+        return "调整库存成功";
     }
 }
 

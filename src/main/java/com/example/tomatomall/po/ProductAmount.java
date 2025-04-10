@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@Table(name="productamount")
+@Table(name="product_amount")
 @Getter
 @Setter
 @NoArgsConstructor

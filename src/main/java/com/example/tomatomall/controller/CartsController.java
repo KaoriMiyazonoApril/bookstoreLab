@@ -1,11 +1,8 @@
 package com.example.tomatomall.controller;
 
-import com.example.tomatomall.RRVO.AddCartRequestVO;
-import com.example.tomatomall.RRVO.AddCartResultVO;
-import com.example.tomatomall.RRVO.CartResultVO;
-import com.example.tomatomall.RRVO.ReviseCartRequestVO;
+import com.example.tomatomall.RRVO.*;
 import com.example.tomatomall.service.CartsService;
-import com.example.tomatomall.vo.*;
+import com.example.tomatomall.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,5 +46,12 @@ public class CartsController {
     @GetMapping
     public Response<CartResultVO> getCart() {
         return Response.buildSuccess(cartsService.getCart());
+    }
+
+    //提交订单
+    @PostMapping("/checkout")
+    public Response checkout(@RequestBody CheckoutRequestVO request) {
+        CheckoutResultVO result = cartsService.checkout(request);
+        return Response.buildSuccess(result);
     }
 }

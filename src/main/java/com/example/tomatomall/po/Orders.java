@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 @Table(name="orders")
 @Getter
@@ -15,18 +16,15 @@ public class Orders {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "orderId")
+    @Column(name = "order_id")
     private Integer Id;
 
     @ManyToOne
-    @JoinColumn(name = "userId", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
     private Account account;
 
-    @Column(name = "userId")
-    private Integer userId;
-
     @Column(name = "total_amount")
-    private Integer totalAmount;
+    private Double totalAmount;
 
     @Column(name = "payment_method")
     private String paymentMethod;
@@ -35,5 +33,5 @@ public class Orders {
     private String status;
 
     @Column(name = "create_time", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private String createTime;
+    private LocalDateTime createTime;
 }

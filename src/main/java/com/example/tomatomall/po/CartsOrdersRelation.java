@@ -19,16 +19,11 @@ public class CartsOrdersRelation {
     private Integer Id;
 
     @ManyToOne
-    @JoinColumn(name = "cartitem_id", referencedColumnName = "cartItemId", insertable = false, updatable = false)
-    private Carts cartItem;
-
-    @Column(name = "cartitem_id")
-    private Integer cartItemId;
+    @JoinColumn(name = "carts_item_id", referencedColumnName = "cart_item_id", insertable = false, updatable = false)
+    private Carts carts;
 
     @ManyToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "orderId", insertable = false, updatable = false)
+    @JoinColumn(name = "order_id", referencedColumnName = "order_id", insertable = false, updatable = false)
     private Orders order;
 
-    @Column(name = "order_id")
-    private Integer orderId;
 }

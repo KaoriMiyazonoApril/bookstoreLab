@@ -12,4 +12,5 @@ public interface CartsRepository extends JpaRepository<Carts, Integer> {
     Carts findByAccountAndProduct(Account account, Product product);
     // 根据用户查找所有购物车项
     List<Carts> findByAccount(Account account);
+    Carts findByCartItemId(Integer cartItemId);
 }

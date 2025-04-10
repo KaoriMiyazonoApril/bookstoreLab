@@ -15,7 +15,7 @@ public class Carts {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "cartItemId")
+    @Column(name = "cart_item_id")
     private Integer cartItemId;
 
     // 外键关联到用户表

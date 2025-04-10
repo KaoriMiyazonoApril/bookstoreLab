@@ -1,0 +1,60 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "items": [
+      {
+        "cartItemId": "6",
+        "productId": "2",
+        "title": "test2",
+        "price": 50.0,
+        "description": null,
+        "cover": null,
+        "detail": null,
+        "quantity": 10
+      },
+      {
+        "cartItemId": "7",
+        "productId": "3",
+        "title": "test3",
+        "price": 64.0,
+        "description": null,
+        "cover": null,
+        "detail": null,
+        "quantity": 1
+      },
+      {
+        "cartItemId": "8",
+        "productId": "4",
+        "title": "test4",
+        "price": 4000.0,
+        "description": null,
+        "cover": null,
+        "detail": null,
+        "quantity": 1
+      },
+      {
+        "cartItemId": "9",
+        "productId": "10",
+        "title": "目太定任五",
+        "price": 246.55,
+        "description": "vzmlwjNDRA",
+        "cover": "nFtFzEhXqz",
+        "detail": null,
+        "quantity": 3
+      },
+      {
+        "cartItemId": "11",
+        "productId": "15",
+        "title": "555",
+        "price": 0.0,
+        "description": "",
+        "cover": "",
+        "detail": null,
+        "quantity": 100
+      }
+    ],
+    "total": 5,
+    "totalAmount": 5303.65
+  }
+}

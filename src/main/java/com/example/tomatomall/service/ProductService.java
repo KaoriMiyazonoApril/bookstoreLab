@@ -129,6 +129,44 @@ public class ProductService {
         productAmountRepository.save(p);
         return "调整库存成功";
     }
+
+    //锁库存
+    public void lockStock(Integer productId, Integer quantity) {
+        ProductAmount productAmount = productAmountRepository.findByProductId(productId);
+        if (productAmount == null) {
+            throw TomatoMallException.ProductNotFound();
+        }
+        if (quantity < 0) {
+            throw new IllegalArgumentException("锁定库存数量不能为负数");
+        }
+        if (productAmount.getAmount() < quantity) {
+            throw new IllegalArgumentException("锁定库存数量不能超过可用库存");
+        }
+        // 锁定库存
+        productAmount.setFrozen(productAmount.getFrozen() + quantity);
+        // 减少可用库存
+        productAmount.setAmount(productAmount.getAmount() - quantity);
+        productAmountRepository.save(productAmount);
+    }
+
+    //释放库存
+    public void releaseStock(Integer productId, Integer quantity) {
+        ProductAmount productAmount = productAmountRepository.findByProductId(productId);
+        if (productAmount == null) {
+            throw TomatoMallException.ProductNotFound();
+        }
+        if (quantity < 0) {
+            throw new IllegalArgumentException("释放库存数量不能为负数");
+        }
+        if (productAmount.getAmount() < quantity) {
+            throw new IllegalArgumentException("释放库存数量不可超过锁定库存");
+        }
+        // 释放锁定库存
+        productAmount.setFrozen(productAmount.getFrozen() - quantity);
+        // 增加可用库存
+        productAmount.setAmount(productAmount.getAmount() + quantity);
+        productAmountRepository.save(productAmount);
+    }
 }
 
 

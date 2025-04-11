@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/bookstore?characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url:
     username: root
-    password: miyazono_11-4
+    password:
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,10 +17,10 @@ server:
 
 aliyun:
   oss:
-    endpoint: https://oss-cn-nanjing.aliyuncs.com
-    accessKeyId: ${ALIYUN_OSS_ACCESS_KEY_ID}
-    accessKeySecret: ${ALIYUN_OSS_ACCESS_KEY_SECRET}
-    bucketName: image-alvinding
+    endpoint:
+    accessKeyId:
+    accessKeySecret:
+    bucketName:
 
 
 alipay:

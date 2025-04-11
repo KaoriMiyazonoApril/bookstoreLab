@@ -42,4 +42,8 @@ public class TomatoMallException extends RuntimeException {
     public static TomatoMallException ossError(){return new TomatoMallException("oss服务出现异常");};
 
     public static TomatoMallException InvaildProductAmount(){return new TomatoMallException("商品数量不合法");}
+
+    public static TomatoMallException fileUploadFail() {
+        return new TomatoMallException("文件上传失败!");
+    }
 }

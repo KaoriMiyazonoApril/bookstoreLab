@@ -16,8 +16,12 @@ public class SpecificationVO {
 
     public Specification toPO(){
         Specification a=new Specification();
-        a.setId(Integer.parseInt(this.id));
-        a.setProductId(Integer.parseInt(this.productId));
+//        a.setId(Integer.parseInt(this.id));
+//        a.setProductId(Integer.parseInt(this.productId));
+        if(id!=null)
+            a.setId(Integer.parseInt(this.id));
+        if(productId!=null)
+            a.setProductId(Integer.parseInt(this.productId));
         a.setItem(this.item);
         a.setValue(this.value);
         return a;

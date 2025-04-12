@@ -1,0 +1,10 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "paymentForm": "<form action='https://openapi-sandbox.dl.alipaydev.com/gateway.do' method='POST'><input type='hidden' name='orderId' value='8'><input type='hidden' name='totalAmount' value='9986.5'><input type='hidden' name='subject' value='订单支付'><input type='hidden' name='returnUrl' value='http://kxhusi.natappfree.cc/alipay/returnUrl'><input type='hidden' name='notifyUrl' value='http://kxhusi.natappfree.cc/alipay/notify'></form>",
+    "orderId": "8",
+    "totalAmount": "9986.5",
+    "paymentMethod": "Alipay"
+  }
+}

@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import java.util.List;
 
+//用于发起支付请求
 @Getter
 @Setter
 @NoArgsConstructor

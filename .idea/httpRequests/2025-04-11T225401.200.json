@@ -1,0 +1,10 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "amount": 0,
+    "frozen": 10,
+    "id": "2",
+    "productId": "2"
+  }
+}

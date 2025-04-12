@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Table(name="orders")
@@ -20,7 +21,7 @@ public class Orders {
     private Integer Id;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private Account account;
 
     @Column(name = "total_amount")
@@ -34,4 +35,13 @@ public class Orders {
 
     @Column(name = "create_time", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createTime;
+
+    @Column(name = "alipay_trade_no")
+    private String alipayTradeNo;
+
+    @Column(name = "paid_amount")
+    private BigDecimal paidAmount;
+
+    @Column(name = "pay_time")
+    private LocalDateTime payTime;
 }

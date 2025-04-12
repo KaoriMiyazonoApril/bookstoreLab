@@ -12,10 +12,8 @@ import com.example.tomatomall.vo.ProductVO;
 import com.example.tomatomall.vo.SpecificationVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.NoSuchElementException;
 
 
 @Service
@@ -137,10 +135,10 @@ public class ProductService {
             throw TomatoMallException.ProductNotFound();
         }
         if (quantity < 0) {
-            throw new IllegalArgumentException("锁定库存数量不能为负数");
+            throw new TomatoMallException("锁定库存数量不能为负数");
         }
         if (productAmount.getAmount() < quantity) {
-            throw new IllegalArgumentException("锁定库存数量不能超过可用库存");
+            throw new TomatoMallException("锁定库存数量不能超过可用库存");
         }
         // 锁定库存
         productAmount.setFrozen(productAmount.getFrozen() + quantity);
@@ -156,15 +154,31 @@ public class ProductService {
             throw TomatoMallException.ProductNotFound();
         }
         if (quantity < 0) {
-            throw new IllegalArgumentException("释放库存数量不能为负数");
+            throw new TomatoMallException("释放库存数量不能为负数");
         }
-        if (productAmount.getAmount() < quantity) {
-            throw new IllegalArgumentException("释放库存数量不可超过锁定库存");
+        if (productAmount.getFrozen() < quantity) {
+            throw new TomatoMallException("释放库存数量不可超过锁定库存");
         }
         // 释放锁定库存
         productAmount.setFrozen(productAmount.getFrozen() - quantity);
         // 增加可用库存
         productAmount.setAmount(productAmount.getAmount() + quantity);
+        productAmountRepository.save(productAmount);
+    }
+    //减少库存
+    public void reduceStock(Integer productId, Integer quantity) {
+        ProductAmount productAmount = productAmountRepository.findByProductId(productId);
+        if (productAmount == null) {
+            throw TomatoMallException.ProductNotFound();
+        }
+        if (quantity < 0) {
+            throw new TomatoMallException("减少库存数量不能为负数");
+        }
+        if (productAmount.getFrozen() < quantity) {
+            throw new TomatoMallException("减少库存数量不可超过锁定库存");
+        }
+        // 减少锁定库存
+        productAmount.setFrozen(productAmount.getFrozen() - quantity);
         productAmountRepository.save(productAmount);
     }
 }

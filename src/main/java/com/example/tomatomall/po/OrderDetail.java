@@ -23,7 +23,7 @@ public class OrderDetail {
     private Product product;
 
     @ManyToOne
-    @JoinColumn(name = "product_quantity", referencedColumnName = "quantity", nullable = false)
+    @JoinColumn(name = "cart_item_id", referencedColumnName = "cart_item_id", nullable = false)
     private Carts carts;
 
     @ManyToOne

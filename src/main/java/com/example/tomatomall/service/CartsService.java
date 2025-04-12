@@ -11,4 +11,5 @@ public interface CartsService {
     Boolean updateCart(String cartItemId, Integer quantity);
     CartResultVO getCart();
     CheckoutResultVO checkout(CheckoutRequestVO request);
+    CheckoutResultVO cancelOrder(String orderId);
 }

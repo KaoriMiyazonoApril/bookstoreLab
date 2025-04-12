@@ -92,7 +92,7 @@ public class CartsServiceImpl implements CartsService {
 
     // 从当前用户购物车删除商品
     @Override
-    public String deleteCart(String productId) {
+    public String deleteCart(String cartItemId) {
         Account currentUser = securityUtil.getCurrentUser();
         if (currentUser == null) {
             throw TomatoMallException.notLogin();
@@ -100,12 +100,8 @@ public class CartsServiceImpl implements CartsService {
         if (currentUser.getId() == null) {
             throw TomatoMallException.invalidUserId();
         }
-        Product product=productRepository.findById(Integer.valueOf(productId))
-                .orElseThrow(TomatoMallException::ProductNotFound);
-        Carts cartItem=cartsRepository.findByAccountAndProduct(
-                currentUser,
-                product
-        );
+
+        Carts cartItem=cartsRepository.findByCartItemId(Integer.valueOf(cartItemId));
         if(cartItem==null){
             return null;
         }
@@ -193,13 +189,18 @@ public class CartsServiceImpl implements CartsService {
         // 3. 验证库存并计算总金额
         double totalAmount = 0;
         for (String cartItemId : cartItemIds) {
-            Product product = cartsRepository.findByCartItemId(Integer.valueOf(cartItemId)).getProduct();
-            if(product==null){
+            Carts cartItem = cartsRepository.findByCartItemId(Integer.valueOf(cartItemId));
+            if (cartItem == null) {
+                throw TomatoMallException.cartItemNotFound();
+            }
+            Product product = cartItem.getProduct();
+            if (product == null) {
                 throw TomatoMallException.ProductNotFound();
             }
             if (productService.getAmount(product.getId()).getAmount() < cartsRepository.findByCartItemId
                     (Integer.valueOf(cartItemId)).getQuantity()) {
                 System.out.println(productService.getAmount(product.getId()).getAmount());
+                System.out.println(productService.getAmount(product.getId()).getFrozen());
                 System.out.println(cartsRepository.findByCartItemId
                         (Integer.valueOf(cartItemId)).getQuantity());
                 throw TomatoMallException.notEnoughStock();
@@ -229,11 +230,23 @@ public class CartsServiceImpl implements CartsService {
             }
         }
 
+        List<String> sucCartItemIds = new ArrayList<>();
+
         // 5. 锁定库存
-        for (String cartItemId : cartItemIds) {
-            productService.lockStock(cartsRepository.findByCartItemId(Integer.valueOf(cartItemId)).getProduct().getId(),
-                    cartsRepository.findByCartItemId(Integer.valueOf(cartItemId)).getQuantity());
+        try {
+            for (String cartItemId : cartItemIds) {
+                productService.lockStock(cartsRepository.findByCartItemId(Integer.valueOf(cartItemId)).getProduct().getId(),
+                        cartsRepository.findByCartItemId(Integer.valueOf(cartItemId)).getQuantity());
+                sucCartItemIds.add(cartItemId);
+            }
+        } catch(TomatoMallException e){
+            for (String sucCartItemId : sucCartItemIds) {
+                productService.releaseStock(cartsRepository.findByCartItemId(Integer.valueOf(sucCartItemId)).getProduct().getId(),
+                        cartsRepository.findByCartItemId(Integer.valueOf(sucCartItemId)).getQuantity());
+            }
+            throw e;
         }
+
 
         // 6. 返回结果
         CheckoutResultVO result = new CheckoutResultVO();
@@ -241,6 +254,45 @@ public class CartsServiceImpl implements CartsService {
         result.setUsername(currentUser.getUsername());
         result.setTotalAmount(totalAmount);
         result.setPaymentMethod(request.getPaymentMethod());
+        result.setCreateTime(order.getCreateTime().toString());
+        result.setStatus(order.getStatus());
+
+        return result;
+    }
+
+    @Override
+    public CheckoutResultVO cancelOrder(String orderId) {
+        // 1. 获取当前用户
+        Account currentUser = securityUtil.getCurrentUser();
+        if (currentUser == null) {
+            throw TomatoMallException.notLogin();
+        }
+
+        // 2. 获取订单
+        Orders order = orderRepository.findById(Integer.valueOf(orderId))
+                .orElseThrow(TomatoMallException::OrderNotFound);
+
+        // 3. 验证订单状态
+        if (!"PENDING".equals(order.getStatus())) {
+            throw TomatoMallException.OrderStatusError();
+        }
+
+        // 4. 释放库存
+        List<OrderDetail> orderDetails = orderDetailRepository.findByOrder(order);
+        for (OrderDetail detail : orderDetails) {
+            productService.releaseStock(detail.getProduct().getId(), detail.getCarts().getQuantity());
+        }
+
+        // 5. 更新订单状态
+        order.setStatus("CANCELED");
+        orderRepository.save(order);
+
+        // 6. 返回结果
+        CheckoutResultVO result = new CheckoutResultVO();
+        result.setOrderId(order.getId().toString());
+        result.setUsername(currentUser.getUsername());
+        result.setTotalAmount(order.getTotalAmount());
+        result.setPaymentMethod(order.getPaymentMethod());
         result.setCreateTime(order.getCreateTime().toString());
         result.setStatus(order.getStatus());
 

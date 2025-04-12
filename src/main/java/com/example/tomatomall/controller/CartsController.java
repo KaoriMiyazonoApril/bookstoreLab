@@ -50,8 +50,12 @@ public class CartsController {
 
     //提交订单
     @PostMapping("/checkout")
-    public Response checkout(@RequestBody CheckoutRequestVO request) {
-        CheckoutResultVO result = cartsService.checkout(request);
-        return Response.buildSuccess(result);
+    public Response<CheckoutResultVO> checkout(@RequestBody CheckoutRequestVO request) {
+        return Response.buildSuccess(cartsService.checkout(request));
+    }
+    //取消订单
+    @DeleteMapping("/checkout/{orderId}")
+    public Response<CheckoutResultVO> cancelOrder(@PathVariable String orderId) {
+        return Response.buildSuccess(cartsService.cancelOrder(orderId));
     }
 }

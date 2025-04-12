@@ -1,6 +1,0 @@
-{
-  "timestamp": "2025-04-10T07:32:17.559+00:00",
-  "status": 500,
-  "error": "Internal Server Error",
-  "path": "/api/cart/1"
-}

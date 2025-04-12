@@ -5,13 +5,15 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Table(name="carts")
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-public class Carts {
+public class Carts implements Serializable {
+    private static final long serialVersionUID = 1L;
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

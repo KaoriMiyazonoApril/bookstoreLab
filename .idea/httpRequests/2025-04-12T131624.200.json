@@ -4,16 +4,6 @@
   "data": {
     "items": [
       {
-        "cartItemId": "4",
-        "productId": "2",
-        "title": "中以北第统",
-        "price": 948.65,
-        "description": "qXBvLMNMZM",
-        "cover": "mQshnXtCkL",
-        "detail": null,
-        "quantity": 10
-      },
-      {
         "cartItemId": "5",
         "productId": "8",
         "title": "test",
@@ -24,7 +14,7 @@
         "quantity": 5
       }
     ],
-    "total": 2,
-    "totalAmount": 9986.5
+    "total": 1,
+    "totalAmount": 500.0
   }
 }

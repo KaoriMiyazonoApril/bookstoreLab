@@ -4,16 +4,6 @@
   "data": {
     "items": [
       {
-        "cartItemId": "4",
-        "productId": "2",
-        "title": "中以北第统",
-        "price": 948.65,
-        "description": "qXBvLMNMZM",
-        "cover": "mQshnXtCkL",
-        "detail": null,
-        "quantity": 10
-      },
-      {
         "cartItemId": "5",
         "productId": "8",
         "title": "test",
@@ -21,10 +11,20 @@
         "description": "test",
         "cover": "test",
         "detail": null,
-        "quantity": 4
+        "quantity": 5
+      },
+      {
+        "cartItemId": "6",
+        "productId": "2",
+        "title": "中以北第统",
+        "price": 948.65,
+        "description": "qXBvLMNMZM",
+        "cover": "mQshnXtCkL",
+        "detail": null,
+        "quantity": 1
       }
     ],
     "total": 2,
-    "totalAmount": 9886.5
+    "totalAmount": 1448.65
   }
 }

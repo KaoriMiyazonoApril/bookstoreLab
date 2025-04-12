@@ -27,7 +27,7 @@ public class OrderServiceImpl implements OrderService {
                 .orElseThrow(TomatoMallException::OrderNotFound);
 
         if(!"PENDING".equals(order.getStatus())){
-            throw TomatoMallException.OrderStatusError();
+            throw TomatoMallException.OrderPayStatusError();
         }
         // 2. 调用支付宝服务生成支付表单
         String paymentForm = aliPayService.createPaymentForm(

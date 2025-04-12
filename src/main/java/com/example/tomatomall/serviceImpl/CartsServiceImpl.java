@@ -105,6 +105,10 @@ public class CartsServiceImpl implements CartsService {
         if(cartItem==null){
             return null;
         }
+        List<OrderDetail> orderDetails = orderDetailRepository.findByCarts(cartItem);
+        if (orderDetails != null && !orderDetails.isEmpty()) {
+            orderDetailRepository.deleteAll(orderDetails);
+        }
         cartsRepository.delete(cartItem);
         return "删除成功";
     }

@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc72b283-5b52-4159-bda9-9d14bcfcb005" name="更改" comment="" />
+    <list default="true" id="fc72b283-5b52-4159-bda9-9d14bcfcb005" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +72,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.未命名.executor": "Run",
-    "git-widget-placeholder": "shopping",
+    "git-widget-placeholder": "otherFeatures",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/86152/Desktop/作业/bookstore",
     "node.js.detected.package.eslint": "true",
@@ -85,7 +87,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.未命名">
+  <component name="RunManager">
     <configuration name="scratch | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#11" index="11" runType="运行单个请求">
       <method v="2" />
     </configuration>
@@ -108,23 +110,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="HTTP 请求.scratch | #8" />
-      <item itemvalue="HTTP 请求.scratch | #11" />
-      <item itemvalue="HTTP 请求.scratch | #12" />
-      <item itemvalue="HTTP 请求.scratch | #14" />
-      <item itemvalue="HTTP 请求.scratch | #7" />
-      <item itemvalue="Spring Boot.未命名" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="HTTP 请求.scratch | #14" />
-        <item itemvalue="HTTP 请求.scratch | #12" />
-        <item itemvalue="HTTP 请求.scratch | #11" />
-        <item itemvalue="HTTP 请求.scratch | #7" />
-        <item itemvalue="HTTP 请求.scratch | #8" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>

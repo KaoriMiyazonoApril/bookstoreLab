@@ -74,7 +74,7 @@ public class ProductService {
             throw TomatoMallException.NoEnoughArguments();
         Product tem=p.toPO();
         productRepository.save(tem);//据说这时候id就有了
-        System.out.println(tem.getId());
+        //System.out.println(tem.getId());
         productAmountRepository.save(new ProductAmount(tem.getId(),0,0));
         if(p.getSpecifications()!=null){
             for(SpecificationVO s:p.getSpecifications()){

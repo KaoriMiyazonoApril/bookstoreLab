@@ -40,4 +40,19 @@ public class AdService {
         adRepository.save(ad);
         return ad.toVO();
     }
+    public AdVO addAd(AdVO a){
+        Ad ad=new Ad();
+        ad.setTitle(a.getTitle());
+        ad.setImage(a.getImgUrl());
+        ad.setContent(a.getContent());
+        ad.setProductId(Integer.parseInt(a.getProductId()));
+        adRepository.save(ad);
+        return ad.toVO();
+    }
+    public String deleteAd(String id){
+        Ad ad=adRepository.findById(Integer.valueOf(id))
+                .orElseThrow(TomatoMallException::AdNotFound);
+        adRepository.delete(ad);
+        return "删除成功";
+    }
 }

@@ -22,4 +22,13 @@ public class AdController {
     public Response updateAd(@RequestBody AdVO ad){
         return Response.buildSuccess(adService.updateAd(ad));
     }
+
+    @PostMapping("")
+    public Response addAd(@RequestBody AdVO ad){
+        return Response.buildSuccess(adService.addAd(ad));
+    }
+    @DeleteMapping("/{id}")
+    public Response deleteAd(@PathVariable String id){
+        return Response.buildSuccess(adService.deleteAd(id));
+    }
 }

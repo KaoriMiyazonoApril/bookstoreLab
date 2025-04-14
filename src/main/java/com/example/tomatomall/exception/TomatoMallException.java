@@ -62,4 +62,6 @@ public class TomatoMallException extends RuntimeException {
     public static TomatoMallException fileUploadFail() {
         return new TomatoMallException("文件上传失败!");
     }
+
+    public static TomatoMallException AdNotFound(){return new TomatoMallException("广告id不存在");}
 }

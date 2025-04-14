@@ -5,28 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc72b283-5b52-4159-bda9-9d14bcfcb005" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221803.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221817.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221824.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221832.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221834.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221843.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221857.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221906.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221910.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221913.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221915.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221924.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2025-04-11T221928.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/controller/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/controller/AdController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/exception/TomatoMallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/exception/TomatoMallException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/serviceImpl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/serviceImpl/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/configure/MyWebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/configure/MyWebMvcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/controller/ImageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/exception/TomatoMallException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/exception/TomatoMallException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/serviceImpl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/serviceImpl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/AdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/AdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/controller/AdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/controller/AdController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/service/AdService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/service/AdService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,51 +51,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP 请求.generated-requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.generated-requests | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.generated-requests | #3.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.generated-requests | #4.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #10.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #11.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #12.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #13.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #14.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #2.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #3.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #4.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #5.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #6.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #7.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #8.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP 请求.scratch | #9.executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.未命名.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;shopping&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP 请求.generated-requests | #1.executor": "Run",
+    "HTTP 请求.generated-requests | #2.executor": "Run",
+    "HTTP 请求.generated-requests | #3.executor": "Run",
+    "HTTP 请求.generated-requests | #4.executor": "Run",
+    "HTTP 请求.scratch | #1.executor": "Run",
+    "HTTP 请求.scratch | #10.executor": "Run",
+    "HTTP 请求.scratch | #11.executor": "Run",
+    "HTTP 请求.scratch | #12.executor": "Run",
+    "HTTP 请求.scratch | #13.executor": "Run",
+    "HTTP 请求.scratch | #14.executor": "Run",
+    "HTTP 请求.scratch | #2.executor": "Run",
+    "HTTP 请求.scratch | #3.executor": "Run",
+    "HTTP 请求.scratch | #4.executor": "Run",
+    "HTTP 请求.scratch | #5.executor": "Run",
+    "HTTP 请求.scratch | #6.executor": "Run",
+    "HTTP 请求.scratch | #7.executor": "Run",
+    "HTTP 请求.scratch | #8.executor": "Run",
+    "HTTP 请求.scratch | #9.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.未命名.executor": "Run",
+    "git-widget-placeholder": "shopping",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/86152/Desktop/作业/bookstore",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.未命名">
-    <configuration name="scratch | #10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#10" index="10" runType="运行单个请求">
-      <method v="2" />
-    </configuration>
     <configuration name="scratch | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#11" index="11" runType="运行单个请求">
       <method v="2" />
     </configuration>
@@ -119,7 +103,10 @@
     <configuration name="scratch | #14" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#14" index="14" runType="运行单个请求">
       <method v="2" />
     </configuration>
-    <configuration name="scratch | #9" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#9" index="9" runType="运行单个请求">
+    <configuration name="scratch | #7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#7" index="7" runType="运行单个请求">
+      <method v="2" />
+    </configuration>
+    <configuration name="scratch | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/scratch.http" executionIdentifier="#8" index="8" runType="运行单个请求">
       <method v="2" />
     </configuration>
     <configuration name="未命名" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
@@ -130,20 +117,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP 请求.scratch | #10" />
-      <item itemvalue="HTTP 请求.scratch | #9" />
+      <item itemvalue="HTTP 请求.scratch | #8" />
       <item itemvalue="HTTP 请求.scratch | #11" />
       <item itemvalue="HTTP 请求.scratch | #12" />
       <item itemvalue="HTTP 请求.scratch | #14" />
+      <item itemvalue="HTTP 请求.scratch | #7" />
       <item itemvalue="Spring Boot.未命名" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP 请求.scratch | #9" />
-        <item itemvalue="HTTP 请求.scratch | #11" />
-        <item itemvalue="HTTP 请求.scratch | #10" />
         <item itemvalue="HTTP 请求.scratch | #14" />
         <item itemvalue="HTTP 请求.scratch | #12" />
+        <item itemvalue="HTTP 请求.scratch | #11" />
+        <item itemvalue="HTTP 请求.scratch | #7" />
+        <item itemvalue="HTTP 请求.scratch | #8" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +158,9 @@
       <workItem from="1744355047391" duration="4031000" />
       <workItem from="1744364909685" duration="11731000" />
       <workItem from="1744423913248" duration="7259000" />
+      <workItem from="1744435330043" duration="19000" />
+      <workItem from="1744508390160" duration="24000" />
+      <workItem from="1744618569318" duration="1327000" />
     </task>
     <servers />
   </component>

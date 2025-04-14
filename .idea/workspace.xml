@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc72b283-5b52-4159-bda9-9d14bcfcb005" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/controller/AdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/controller/AdController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/exception/TomatoMallException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/exception/TomatoMallException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/AdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/AdService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/tomatomall/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/controller/AdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/controller/AdController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/tomatomall/service/AdService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/tomatomall/service/AdService.class" afterDir="false" />
-    </list>
+    <list default="true" id="fc72b283-5b52-4159-bda9-9d14bcfcb005" name="更改" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -90,6 +81,7 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -160,7 +152,7 @@
       <workItem from="1744423913248" duration="7259000" />
       <workItem from="1744435330043" duration="19000" />
       <workItem from="1744508390160" duration="24000" />
-      <workItem from="1744618569318" duration="1327000" />
+      <workItem from="1744618569318" duration="1429000" />
     </task>
     <servers />
   </component>

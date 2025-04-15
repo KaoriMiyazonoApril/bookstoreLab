@@ -1,12 +1,15 @@
 package com.example.tomatomall.service;
 
 import com.example.tomatomall.exception.TomatoMallException;
+import com.example.tomatomall.po.Comment;
 import com.example.tomatomall.po.Product;
 import com.example.tomatomall.po.ProductAmount;
 import com.example.tomatomall.po.Specification;
+import com.example.tomatomall.repository.CommentRepository;
 import com.example.tomatomall.repository.ProductAmountRepository;
 import com.example.tomatomall.repository.ProductRepository;
 import com.example.tomatomall.repository.SpecificationRepository;
+import com.example.tomatomall.vo.CommentVO;
 import com.example.tomatomall.vo.ProductAmountVO;
 import com.example.tomatomall.vo.ProductVO;
 import com.example.tomatomall.vo.SpecificationVO;
@@ -24,7 +27,8 @@ public class ProductService {
     ProductAmountRepository productAmountRepository;
     @Autowired
     SpecificationRepository specificationRepository;
-
+    @Autowired
+    CommentRepository commentRepository;
 
     public List<ProductVO> getAllProduct(){//完成了
         List<Product> ls=productRepository.findAll();
@@ -180,6 +184,61 @@ public class ProductService {
         // 减少锁定库存
         productAmount.setFrozen(productAmount.getFrozen() - quantity);
         productAmountRepository.save(productAmount);
+    }
+
+    public List<ProductVO> searchForSomething(String something){
+        List<Product> ls=productRepository.findByTitleContainingOrDescriptionContainingOrCoverContainingOrDetailContaining(something,something,something,something);
+        List<ProductVO> ans=new ArrayList<>();
+        for(Product p:ls){
+            ans.add(p.toVO());
+        }
+        return ans;
+    }
+
+    public List<ProductVO> getByCategory(Integer cate){
+        List<Product> ls=productRepository.findByCategory(cate);
+        List<ProductVO> ans=new ArrayList<>();
+        for(Product p:ls){
+           ans.add(p.toVO());
+        }
+        return ans;
+    }
+
+    public String addComment(CommentVO c){
+        if(c.getUserId()==null || c.getProductId()==null)
+            throw TomatoMallException.NoEnoughArguments();
+        Comment cm=commentRepository.findByUserIdAndProductId(c.getUserId(),c.getProductId());
+        if(cm==null){
+            commentRepository.save(c.toPO());
+            return "添加评论成功";
+        }
+        else{
+            cm.setDetail(c.getDetail());
+            commentRepository.save(cm);
+            return "修改评论成功";
+        }
+    }
+
+    public List<CommentVO> findByProductId(Integer id){
+        List<Comment> ls=commentRepository.findByProductId(id);
+        List<CommentVO> ans=new ArrayList<>();
+        for(Comment c:ls){
+            ans.add(c.toVO());
+        }
+        return ans;
+    }
+
+    public String deleteComment(CommentVO c){
+        if(c.getUserId()==null || c.getProductId()==null)
+            throw TomatoMallException.NoEnoughArguments();
+        Comment cm=commentRepository.findByUserIdAndProductId(c.getUserId(),c.getProductId());
+        if(cm!=null){
+            commentRepository.delete(cm);
+            return "删除成功";
+        }
+        else{
+            throw TomatoMallException.CommentNotFound();
+        }
     }
 }
 

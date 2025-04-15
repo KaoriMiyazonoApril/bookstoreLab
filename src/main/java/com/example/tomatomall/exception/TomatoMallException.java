@@ -64,4 +64,10 @@ public class TomatoMallException extends RuntimeException {
     }
 
     public static TomatoMallException AdNotFound(){return new TomatoMallException("广告id不存在");}
+
+    public static TomatoMallException DuplicateFavor(){return new TomatoMallException("已经收藏该商品");}
+
+    public static TomatoMallException FavorNotFound(){return new TomatoMallException("你的收藏不存在");};
+
+    public static TomatoMallException CommentNotFound(){return new TomatoMallException("你的评论不存在");}
 }

@@ -56,4 +56,14 @@ public class ProductController {
     public Response getProductAmount(@PathVariable(value = "productId") Integer id){
         return Response.buildSuccess(productService.getAmount(id));
     }
+
+    @GetMapping("/search/{something}")
+    public Response searchForSomething(@PathVariable(value = "something") String something){
+        return Response.buildSuccess(productService.searchForSomething(something));
+    }
+
+    @GetMapping("category/{category}")
+    public Response getByCategory(@PathVariable(value = "category") Integer category){
+        return Response.buildSuccess(productService.getByCategory(category));
+    }
 }

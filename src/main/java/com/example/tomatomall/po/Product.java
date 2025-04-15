@@ -37,6 +37,9 @@ public class Product {
     @Column(name = "detail")
     private String detail;
 
+    @Column(name="category")
+    private Integer category;
+
     public ProductVO toVO(){
         ProductVO p=new ProductVO();
         p.setId(String.valueOf(this.id));
@@ -46,7 +49,7 @@ public class Product {
         p.setDescription(this.description);
         p.setCover(this.cover);
         p.setDetail(this.detail);
-
+        p.setCategory(this.category);
         return p;
     }
 

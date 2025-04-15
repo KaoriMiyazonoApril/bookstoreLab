@@ -2,19 +2,26 @@ package com.example.tomatomall.serviceImpl;
 
 import com.example.tomatomall.exception.TomatoMallException;
 import com.example.tomatomall.po.Account;
+import com.example.tomatomall.po.FavoriteProduct;
 import com.example.tomatomall.repository.AccountRepository;
+import com.example.tomatomall.repository.FavorRepository;
 import com.example.tomatomall.service.AccountService;
 import com.example.tomatomall.util.TokenUtil;
 import com.example.tomatomall.vo.AccountVO;
+import com.example.tomatomall.vo.FavoriteProductVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class AccountServiceImpl implements AccountService {
     @Autowired
     AccountRepository accountRepository;
-
+    @Autowired
+    FavorRepository favorRepository;
     @Autowired
     TokenUtil tk;
 
@@ -87,6 +94,44 @@ public class AccountServiceImpl implements AccountService {
         }
 
         accountRepository.save(ac);
+        return true;
+    }
+
+    @Override
+    public Boolean deleteUser(Integer id){
+        Account a=accountRepository.findById(id).get();
+        accountRepository.delete(a);
+        return true;
+    }
+
+    @Override
+    public Boolean addFavor(FavoriteProductVO f){
+        if(f.getUserId()==null || f.getProductId()==null)
+            throw TomatoMallException.NoEnoughArguments();
+        if(favorRepository.findByUserIdAndProductId(f.getUserId(),f.getProductId())!=null)
+            throw TomatoMallException.DuplicateFavor();
+        favorRepository.save(f.toPO());
+        return true;
+    }
+
+    @Override
+    public List<Integer> findFavor(Integer userId){
+        List<FavoriteProduct> ls=favorRepository.findByUserId(userId);
+        List<Integer> ans=new ArrayList<>();
+        for(FavoriteProduct f:ls){
+            ans.add(f.getProductId());
+        }
+        return ans;
+    }
+
+    @Override
+    public Boolean deleteFavor(FavoriteProductVO f){
+        if(f.getUserId()==null || f.getProductId()==null)
+            throw TomatoMallException.NoEnoughArguments();
+        FavoriteProduct fv=favorRepository.findByUserIdAndProductId(f.getUserId(),f.getProductId());
+        if(fv==null)
+            throw TomatoMallException.FavorNotFound();
+        favorRepository.delete(fv);
         return true;
     }
 }

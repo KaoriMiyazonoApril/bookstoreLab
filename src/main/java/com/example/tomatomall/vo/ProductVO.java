@@ -15,7 +15,7 @@ public class ProductVO {
     private Double price;
     private Double rate;
     private List<SpecificationVO> specifications;
-
+    private Integer category;
     public Product toPO(){
         Product p=new Product();
         if(id!=null)
@@ -26,6 +26,7 @@ public class ProductVO {
         p.setDetail(this.detail);
         p.setPrice(this.price);
         p.setRate(this.rate);
+        p.setCategory(this.category);
         return p;
     }
 }

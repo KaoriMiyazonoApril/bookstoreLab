@@ -1,0 +1,14 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "id": "29",
+    "title": "test5",
+    "description": "test",
+    "cover": "test",
+    "detail": "test",
+    "price": 0.01,
+    "rate": 0.5,
+    "specifications": []
+  }
+}

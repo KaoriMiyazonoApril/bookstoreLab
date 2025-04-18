@@ -1,24 +1,200 @@
-POST http://localhost:8080/api/orders/12/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=CC2DCBCFC4045DD5FCBF0A70D35668A8
+
+<> 2025-04-18T213418.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6A41B37A95476C6C7C2CD1BAE262809C
+
+<> 2025-04-18T212222.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6A41B37A95476C6C7C2CD1BAE262809C
+
+<> 2025-04-18T212152.200.html
+
+###
+
+PATCH http://localhost:8080/api/products/stockpile/29
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 19
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6A41B37A95476C6C7C2CD1BAE262809C
+
+{
+  "amount": "5"
+}
+
+<> 2025-04-18T212152.200.json
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6A41B37A95476C6C7C2CD1BAE262809C
+
+<> 2025-04-18T212139.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6A41B37A95476C6C7C2CD1BAE262809C
+
+<> 2025-04-18T212136.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A61691458A464CD2D1466847A3C90269
+
+<> 2025-04-18T212019.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=A61691458A464CD2D1466847A3C90269
+
+<> 2025-04-18T211852.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4EF2C9C29503155C1892A6339E650DE6
+
+<> 2025-04-18T210318.200.html
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4EF2C9C29503155C1892A6339E650DE6
+
+<> 2025-04-18T210253.404.json
+
+###
+
+GET http://localhost:8080/alipay/pay?subject=订单支付&traceNo=21&totalAmount=0.01
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4EF2C9C29503155C1892A6339E650DE6
+
+<> 2025-04-18T210159.404.json
+
+###
+
+POST http://localhost:8080/api/orders/21/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=4EF2C9C29503155C1892A6339E650DE6
 content-length: 0
 
-<> 2025-04-12T131903.200.json
+<> 2025-04-18T205049.200.json
+
+###
+
+POST http://localhost:8080/api/orders/21/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=797FF3B37206E779EC603535A7571DBE
+content-length: 0
+
+<> 2025-04-18T204353.200.json
+
+###
+
+POST http://localhost:8080/api/orders/21/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=797FF3B37206E779EC603535A7571DBE
+content-length: 0
+
+<> 2025-04-18T203724.200.json
+
+###
+
+POST http://localhost:8080/api/orders/21/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=797FF3B37206E779EC603535A7571DBE
+content-length: 0
+
+<> 2025-04-18T203306.200.json
 
 ###
 
 POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
-Content-Length: 185
+Content-Length: 181
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=03C79FD8454F639D78D662AA0F160AF3
 
 {
   "shippingAddress": {
@@ -28,33 +204,47 @@ Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
     "postalCode": "123456"
   },
   "paymentMethod": "Alipay",
-  "cartItemIds": ["5","6"]
+  "cartItemIds": ["7"]
 }
 
-<> 2025-04-12T131854.200.json
+<> 2025-04-18T203257.200.json
 
 ###
 
-GET http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/20/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=5D3FABFBEEBFE15FE40F111A949680FC
+content-length: 0
 
-<> 2025-04-12T131847.200.json
+<> 2025-04-18T164930.200.json
+
+###
+
+POST http://localhost:8080/api/orders/20/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=5D3FABFBEEBFE15FE40F111A949680FC
+content-length: 0
+
+<> 2025-04-18T163811.200.json
 
 ###
 
 POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
-Content-Length: 185
+Content-Length: 181
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=5D3FABFBEEBFE15FE40F111A949680FC
 
 {
   "shippingAddress": {
@@ -64,698 +254,470 @@ Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
     "postalCode": "123456"
   },
   "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
+  "cartItemIds": ["7"]
 }
 
-<> 2025-04-12T131839.200.json
+<> 2025-04-18T163805.200.json
 
 ###
 
-GET http://localhost:8080/api/products/stockpile/2
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/19/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=862031720C0262085B7876C4AAFDC104
+content-length: 0
 
-<> 2025-04-12T131831.200.json
+<> 2025-04-18T163709.200.json
+
+###
+
+POST http://localhost:8080/api/orders/19/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=94A3988078D432BE7D6AD7EAABD21F2C
+content-length: 0
+
+<> 2025-04-18T163138.200.json
+
+###
+
+POST http://localhost:8080/api/orders/19/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=893FDBA565A81EEF4E3E09E775544DC1
+content-length: 0
+
+<> 2025-04-18T160723.200.json
+
+###
+
+POST http://localhost:8080/api/orders/19/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=893FDBA565A81EEF4E3E09E775544DC1
+content-length: 0
+
+<> 2025-04-18T160154.200.json
+
+###
+
+POST http://localhost:8080/api/orders/18/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=893FDBA565A81EEF4E3E09E775544DC1
+content-length: 0
+
+<> 2025-04-18T160150.200.json
+
+###
+
+POST http://localhost:8080/api/cart/checkout
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 181
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=893FDBA565A81EEF4E3E09E775544DC1
+
+{
+  "shippingAddress": {
+    "name": "test",
+    "address": "test",
+    "phone": "12345678910",
+    "postalCode": "123456"
+  },
+  "paymentMethod": "Alipay",
+  "cartItemIds": ["7"]
+}
+
+<> 2025-04-18T160147.200.json
+
+###
+
+POST http://localhost:8080/api/orders/18/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=EFD6944AF37B48036E1BD910CD5CAAF5
+content-length: 0
+
+<> 2025-04-18T160143.200.json
+
+###
+
+POST http://localhost:8080/api/orders/18/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=13D634D2E256E99B892A3F16B1994BF4
+content-length: 0
+
+<> 2025-04-18T154634.200.json
+
+###
+
+POST http://localhost:8080/api/orders/18/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=1054D92B0C583611A45A6EFF64CEC4BE
+content-length: 0
+
+<> 2025-04-18T153652.200.json
+
+###
+
+POST http://localhost:8080/api/orders/18/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=1054D92B0C583611A45A6EFF64CEC4BE
+content-length: 0
+
+<> 2025-04-18T152756.200.json
+
+###
+
+POST http://localhost:8080/api/cart/checkout
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 181
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=1054D92B0C583611A45A6EFF64CEC4BE
+
+{
+  "shippingAddress": {
+    "name": "test",
+    "address": "test",
+    "phone": "12345678910",
+    "postalCode": "123456"
+  },
+  "paymentMethod": "Alipay",
+  "cartItemIds": ["7"]
+}
+
+<> 2025-04-18T152751.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=1054D92B0C583611A45A6EFF64CEC4BE
+content-length: 0
+
+<> 2025-04-18T152748.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=8D2EAFD5F1366FD3E6508F65A470B98F
+content-length: 0
+
+<> 2025-04-18T152742.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=83C1CB2FEE51F9653E905A113574F6BB
+content-length: 0
+
+<> 2025-04-18T152103.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=8433787F3CC2283B3B1B54F74F2E99E7
+content-length: 0
+
+<> 2025-04-18T151635.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6750E6FBEFCA04D0C0AB40DFB5EFF2FF
+content-length: 0
+
+<> 2025-04-18T151352.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=2BD6149FEC3656EA1E7725900AFE9C8E
+content-length: 0
+
+<> 2025-04-18T151130.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=6008966B9FA8A2A442E2E02D27D464F8
+content-length: 0
+
+<> 2025-04-18T150910.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
+content-length: 0
+
+<> 2025-04-18T150111.200.json
+
+###
+
+POST http://localhost:8080/api/orders/17/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
+content-length: 0
+
+<> 2025-04-18T145324.200.json
+
+###
+
+POST http://localhost:8080/api/cart/checkout
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 181
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
+
+{
+  "shippingAddress": {
+    "name": "test",
+    "address": "test",
+    "phone": "12345678910",
+    "postalCode": "123456"
+  },
+  "paymentMethod": "Alipay",
+  "cartItemIds": ["7"]
+}
+
+<> 2025-04-18T145319.200.json
 
 ###
 
 POST http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
-Content-Length: 39
+Content-Length: 40
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
 
 {
-  "productId": "2",
+  "productId": "29",
   "quantity": 1
 }
 
-<> 2025-04-12T131820.200.json
+<> 2025-04-18T145307.200.json
+
+###
+
+PATCH http://localhost:8080/api/products/stockpile/29
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 19
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
+
+{
+  "amount": "5"
+}
+
+<> 2025-04-18T145303.200.json
+
+###
+
+POST http://localhost:8080/api/cart
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 40
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
+
+{
+  "productId": "29",
+  "quantity": 1
+}
+
+<> 2025-04-18T145248.200.json
+
+###
+
+POST http://localhost:8080/api/products
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
+Content-Type: application/json
+Content-Length: 161
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
+
+{
+  "title": "test5",
+  "description": "test",
+  "price": 0.01,
+  "stockpile": 10,
+  "cover": "test",
+  "detail": "test",
+  "rate": 0.5,
+  "specifications": []
+}
+
+<> 2025-04-18T145232.200.json
 
 ###
 
 GET http://localhost:8080/api/products
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
+Cookie: JSESSIONID=B2F40B5EF880EF3737C33D2A2A3CC331
 
-<> 2025-04-12T131809.200.json
+<> 2025-04-18T145151.200.json
 
 ###
 
-POST http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 40
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-{
-  "productId": "11",
-  "quantity": 1
-}
-
-<> 2025-04-12T131804.200.json
-
-###
-
-GET http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/16/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-<> 2025-04-12T131742.200.json
-
-###
-
-POST http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 39
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-{
-  "productId": "8",
-  "quantity": 1
-}
-
-<> 2025-04-12T131727.200.json
-
-###
-
-GET http://localhost:8080/api/products/stockpile/8
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-<> 2025-04-12T131714.200.json
-
-###
-
-POST http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 39
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-{
-  "productId": "8",
-  "quantity": 4
-}
-
-<> 2025-04-12T131710.200.json
-
-###
-
-GET http://localhost:8080/api/products/stockpile/8
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-<> 2025-04-12T131704.200.json
-
-###
-
-GET http://localhost:8080/api/products
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-<> 2025-04-12T131647.200.json
-
-###
-
-GET http://localhost:8080/api/products/stockpile/2
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-<> 2025-04-12T131642.200.json
-
-###
-
-POST http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 39
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-{
-  "productId": "8",
-  "quantity": 4
-}
-
-<> 2025-04-12T131633.200.json
-
-###
-
-GET http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-<> 2025-04-12T131624.200.json
-
-###
-
-PATCH http://localhost:8080/api/cart/5
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 40
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=A55261ACCD46223516BCC7A5BC11BC2F
-
-{
-  "quantity": 5,
-  "cartItemId": "5"
-}
-
-<> 2025-04-12T131622.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/4
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=237F6879A8D01B77A3145FFCA13A4E0B
+Cookie: JSESSIONID=06B6B4897F322A4AAFE631D922F8D4CF
 content-length: 0
 
-<> 2025-04-12T131617.200.json
+<> 2025-04-18T144927.200.json
 
 ###
 
-DELETE http://localhost:8080/api/cart/4
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/16/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
+Cookie: JSESSIONID=18F00F4B0D6DA8EE4685FD973FE431EA
 content-length: 0
 
-<> 2025-04-12T131326.500.json
+<> 2025-04-18T144400.200.json
 
 ###
 
-DELETE http://localhost:8080/api/cart/4
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/16/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
+Cookie: JSESSIONID=D9B221F01714DEFB0FEE3B8845AD2B27
 content-length: 0
 
-<> 2025-04-12T131304.500.json
+<> 2025-04-18T144030.200.json
 
 ###
 
-DELETE http://localhost:8080/api/cart/4
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/16/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
+Cookie: JSESSIONID=6EA4448A24E6700CA84BCB69606F4168
 content-length: 0
 
-<> 2025-04-12T131253.500.json
+<> 2025-04-18T142642.200.json
 
 ###
 
-GET http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
+POST http://localhost:8080/api/orders/16/pay
+token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ1MDQxODExfQ.qb-A4W0qn_QTVm8su1IXmUUNBqUi6iDNGS-p27piMec
 Content-Type: application/json
 User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
 Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
-
-<> 2025-04-12T131244.200.json
-
-###
-
-PATCH http://localhost:8080/api/cart/5
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 40
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
-
-{
-  "quantity": 5,
-  "cartItemId": "5"
-}
-
-<> 2025-04-12T131241.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/4
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
+Cookie: JSESSIONID=6EA4448A24E6700CA84BCB69606F4168
 content-length: 0
 
-<> 2025-04-12T131230.500.json
-
-###
-
-GET http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
-
-<> 2025-04-12T131222.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/3
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
-content-length: 0
-
-<> 2025-04-12T131210.200.json
-
-###
-
-POST http://localhost:8080/api/orders/11/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=9FB0178F0F281C052245D68E8D85D9BA
-content-length: 0
-
-<> 2025-04-12T131115.200.json
-
-###
-
-POST http://localhost:8080/api/orders/10/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=506F392F28F45ADD087326FA0E306856
-content-length: 0
-
-<> 2025-04-12T131111.200.json
-
-###
-
-POST http://localhost:8080/api/orders/11/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=506F392F28F45ADD087326FA0E306856
-content-length: 0
-
-<> 2025-04-12T131008.200.json
-
-###
-
-POST http://localhost:8080/api/orders/10/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=506F392F28F45ADD087326FA0E306856
-content-length: 0
-
-<> 2025-04-12T130958.200.json
-
-###
-
-POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 185
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=506F392F28F45ADD087326FA0E306856
-
-{
-  "shippingAddress": {
-    "name": "test",
-    "address": "test",
-    "phone": "12345678910",
-    "postalCode": "123456"
-  },
-  "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
-}
-
-<> 2025-04-12T130948.200.json
-
-###
-
-GET http://localhost:8080/api/cart
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=F5B76A42541560E86DC08DBD17F84C0E
-
-<> 2025-04-12T130945.200.json
-
-###
-
-POST http://localhost:8080/api/orders/10/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=F5B76A42541560E86DC08DBD17F84C0E
-content-length: 0
-
-<> 2025-04-12T125858.200.json
-
-###
-
-POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 185
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=1C7DACF637619209321E3CA2389ADE39
-
-{
-  "shippingAddress": {
-    "name": "test",
-    "address": "test",
-    "phone": "12345678910",
-    "postalCode": "123456"
-  },
-  "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
-}
-
-<> 2025-04-12T125850.200.json
-
-###
-
-POST http://localhost:8080/api/orders/9/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=1C7DACF637619209321E3CA2389ADE39
-content-length: 0
-
-<> 2025-04-12T001409.200.json
-
-###
-
-POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 185
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=1C7DACF637619209321E3CA2389ADE39
-
-{
-  "shippingAddress": {
-    "name": "test",
-    "address": "test",
-    "phone": "12345678910",
-    "postalCode": "123456"
-  },
-  "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
-}
-
-<> 2025-04-12T001404.200.json
-
-###
-
-POST http://localhost:8080/api/orders/8/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=1C7DACF637619209321E3CA2389ADE39
-content-length: 0
-
-<> 2025-04-12T001356.200.json
-
-###
-
-POST http://localhost:8080/api/orders/7/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=6DD2F58E5BFDF9839F6F6B3D18103B28
-content-length: 0
-
-<> 2025-04-12T001351.200.json
-
-###
-
-POST http://localhost:8080/api/orders/7/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=6DD2F58E5BFDF9839F6F6B3D18103B28
-content-length: 0
-
-<> 2025-04-12T001055.200.json
-
-###
-
-POST http://localhost:8080/api/orders/8/pay
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=6DD2F58E5BFDF9839F6F6B3D18103B28
-content-length: 0
-
-<> 2025-04-12T001037.200.json
-
-###
-
-POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 185
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=6DD2F58E5BFDF9839F6F6B3D18103B28
-
-{
-  "shippingAddress": {
-    "name": "test",
-    "address": "test",
-    "phone": "12345678910",
-    "postalCode": "123456"
-  },
-  "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
-}
-
-<> 2025-04-12T001031.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/checkout/7
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=23F6432D7DE557C0FCFBBA6B7A0A48FC
-content-length: 0
-
-<> 2025-04-12T001026.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/checkout/7
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=23F6432D7DE557C0FCFBBA6B7A0A48FC
-content-length: 0
-
-<> 2025-04-11T225811.200.json
-
-###
-
-POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 185
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=23F6432D7DE557C0FCFBBA6B7A0A48FC
-
-{
-  "shippingAddress": {
-    "name": "test",
-    "address": "test",
-    "phone": "12345678910",
-    "postalCode": "123456"
-  },
-  "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
-}
-
-<> 2025-04-11T225806.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/checkout/6
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=23F6432D7DE557C0FCFBBA6B7A0A48FC
-content-length: 0
-
-<> 2025-04-11T225802.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/checkout/5
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=2129E48C0AE2B7A079F2D33090F28C5E
-content-length: 0
-
-<> 2025-04-11T225755.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/checkout/5
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=2129E48C0AE2B7A079F2D33090F28C5E
-content-length: 0
-
-<> 2025-04-11T225545.500.json
-
-###
-
-POST http://localhost:8080/api/cart/checkout
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-Content-Length: 185
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=2129E48C0AE2B7A079F2D33090F28C5E
-
-{
-  "shippingAddress": {
-    "name": "test",
-    "address": "test",
-    "phone": "12345678910",
-    "postalCode": "123456"
-  },
-  "paymentMethod": "Alipay",
-  "cartItemIds": ["5","4"]
-}
-
-<> 2025-04-11T225540.200.json
-
-###
-
-DELETE http://localhost:8080/api/cart/checkout/5
-token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2IiwiZXhwIjoxNzQ0NDY1NjcyfQ.cHIeBPhG1gSuCgvz-Y8Qqs2-0_s4Qd2mb3b1X7QQD0w
-Content-Type: application/json
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3.5
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-Cookie: JSESSIONID=ED4DC90B14A1E12A291E6DB545949159
-content-length: 0
-
-<> 2025-04-11T225529.500.json
+<> 2025-04-18T142542.200.json
 
 ###
 

@@ -30,7 +30,7 @@ public class OrderSchedule {
         LocalDateTime now = LocalDateTime.now();
         //设置超时时间
         List<Orders> expiredOrders = ordersRepository.findByStatusAndCreateTimeBefore(
-                "PENDING", now.minusMinutes(3)
+                "PENDING", now.minusMinutes(30)
         );
         if (expiredOrders.isEmpty()) {
             System.out.println("没有过期订单");

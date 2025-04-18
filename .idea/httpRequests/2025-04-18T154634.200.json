@@ -1,0 +1,10 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "paymentForm": "<form name=\"punchout_form\" method=\"post\" action=\"https://openapi-sandbox.dl.alipaydev.com/gateway.do?charset=utf-8&method=alipay.trade.page.pay&sign=P7MXqPBMGSt1YcQkINB7kZFp0ohlYzebBWDzBG2h0kSNdOTYy73Rg3AjAROY1LgEoWBoqAG%2BZVhf1EwqSuh9CIWYtLPRUPX%2BwaZueefEO%2F1bZfN9kyfVQYDheVOI0bpDCOHGs3YGjzY7p0HUP9vnpmjz%2BIQIPaxwzaEU8EJhPhvMx4acqJYm2cTM90WYARncXE7Y0tafgzLtplY7uMXv3Rp5NXVUsp0w7ODaNScmaf6OUfbocEw0BPjbRcoyngf0DpHLOnvxX1sh6R5wmGj0h1z2WQeo7emNPZfltI%2B9d9g44uJ%2B9niiqN9M%2FuKx%2BOTFdKqy7M1iOHTD6xUgL7xKEw%3D%3D&return_url=http%3A%2F%2Fb3hh88.natappfree.cc%2Falipay%2FreturnUrl&notify_url=http%3A%2F%2Fb3hh88.natappfree.cc%2Fapi%2Forders%2Fnotify&version=1.0&app_id=2021000147682493&sign_type=RSA2&timestamp=2025-04-18+15%3A46%3A34&alipay_sdk=alipay-sdk-java-dynamicVersionNo&format=JSON\">\n<input type=\"hidden\" name=\"biz_content\" value=\"{&quot;out_trade_no&quot;:&quot;18&quot;,&quot;total_amount&quot;:0.01,&quot;subject&quot;:&quot;订单支付&quot;,&quot;product_code&quot;:&quot;FAST_INSTANT_TRADE_PAY&quot;}\">\n<input type=\"submit\" value=\"立即支付\" style=\"display:none\" >\n</form>\n<script>document.forms[0].submit();</script>",
+    "orderId": "18",
+    "totalAmount": "0.01",
+    "paymentMethod": "Alipay"
+  }
+}

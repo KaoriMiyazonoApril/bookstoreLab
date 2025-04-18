@@ -13,13 +13,12 @@ import com.example.tomatomall.service.ProductService;
 import com.example.tomatomall.vo.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -50,7 +49,7 @@ public class OrderController {
     }
 
     //支付回调
-    @PostMapping("/api/orders/notify")
+    @PostMapping("/notify")
     public String handleAlipayNotify(HttpServletRequest request, HttpServletResponse response) throws IOException, AlipayApiException {
         // 1. 解析支付宝回调参数（通常是 application/x-www-form-urlencoded）
         Map<String, String> params = request.getParameterMap().entrySet().stream()
@@ -75,14 +74,52 @@ public class OrderController {
             // 减库存
             Orders order = orderRepository.findById(Integer.valueOf(orderId))
                     .orElseThrow(TomatoMallException::OrderNotFound);
+            if (!"PENDING".equals(order.getStatus())) {
+                return "success"; // 如果订单已经处理过，直接返回success
+            }
             List<OrderDetail> orderDetails = orderDetailRepository.findByOrder(order);
             for (OrderDetail detail : orderDetails) {
                 productService.reduceStock(detail.getProduct().getId(), detail.getCarts().getQuantity());
             }
         }
 
+        String rdsToken = params.get("rdsToken");
+        if (rdsToken != null&&!rdsToken.isEmpty()) {
+            request.getSession().setAttribute("rdsToken", rdsToken);
+        }
+
         // 4. 必须返回纯文本的 "success"（支付宝要求）
         response.getWriter().print("success");
-        return "success";
+        return "success";/*
+        if (request.getParameter("trade_status").equals("TRADE_SUCCESS")) {
+            System.out.println("=========支付宝异步回调========");
+            Map<String, String> params = new HashMap<>();
+            Map<String, String[]> requestParams = request.getParameterMap();
+            for (String name : requestParams.keySet()) {
+                params.put(name, request.getParameter(name));
+                // System.out.println(name + " = " + request.getParameter(name));
+            }
+            String sign = params.get("sign");
+            String content = AlipaySignature.getSignCheckContentV1(params);
+            boolean checkSignature = AlipaySignature.rsa256CheckContent(content, sign, ALI_PUBLIC_KEY, "UTF-8"); // 验证签名
+            // 支付宝验签
+            if (checkSignature) {
+                // 验签通过 可做自己需要的操作
+                System.out.println("交易名称: " + params.get("subject"));
+                System.out.println("交易状态: " + params.get("trade_status"));
+                System.out.println("支付宝交易凭证号: " + params.get("trade_no"));
+                System.out.println("商户订单号: " + params.get("out_trade_no"));
+                System.out.println("交易金额: " + params.get("total_amount"));
+                System.out.println("买家在支付宝唯一id: " + params.get("buyer_id"));
+                System.out.println("买家付款时间: " + params.get("gmt_payment"));
+                System.out.println("买家付款金额: " + params.get("buyer_pay_amount"));
+            }
+        }
+        return "success";*/
     }
+    @GetMapping("/returnUrl")
+    public String returnUrl() {
+        return "支付成功了";
+    }
+
 }

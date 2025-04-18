@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
+
 @RestController
 @RequestMapping("/alipay")
 public class AliPayController {
@@ -51,6 +52,7 @@ public class AliPayController {
         bizContent.put("total_amount", aliPay.getTotalAmount()); // 订单的总金额
         bizContent.put("subject", aliPay.getSubject());   // 支付的名称
         bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");  // 固定配置
+        //bizContent.put("timestamp", new SimpleDateFormat("yyyy-MM-dd+HH:mm:ss").format(new Date()));
         request.setBizContent(bizContent.toString());
         // 执行请求，拿到响应的结果，返回给浏览器
         String form = "";

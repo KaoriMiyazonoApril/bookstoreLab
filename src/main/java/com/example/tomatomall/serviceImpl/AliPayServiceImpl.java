@@ -8,13 +8,8 @@ import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.example.tomatomall.service.AliPayService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
 import javax.servlet.http.HttpServletResponse;
-
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-
 
 @Service
 public class AliPayServiceImpl implements AliPayService {
@@ -38,39 +33,7 @@ public class AliPayServiceImpl implements AliPayService {
 
     @Override
     public String createPaymentForm(String orderId, Double totalAmount, String subject) {
-        // 创建AlipayClient
-
-        AlipayClient alipayClient = new DefaultAlipayClient(
-            serverUrl,
-            appId,
-            privateKey,
-            "json",
-            "UTF-8",
-            alipayPublicKey,
-            "RSA2"
-        );
-
-        // 创建请求对象
-        AlipayTradePagePayRequest request = new AlipayTradePagePayRequest();
-        request.setReturnUrl(returnUrl);
-        request.setNotifyUrl(notifyUrl);
-
-        // 构建业务参数
-        JSONObject bizContent = new JSONObject();
-        bizContent.put("out_trade_no", orderId);
-        bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");
-        bizContent.put("total_amount", totalAmount);
-        bizContent.put("subject", subject);
-        request.setBizContent(bizContent.toJSONString());
-
-        // 生成支付表单
-        try {
-            return alipayClient.pageExecute(request).getBody();
-        } catch (AlipayApiException e) {
-            throw new RuntimeException("生成支付表单失败", e);
-        }
-        /*
-
+        // 1. 创建Client，通用SDK提供的Client，负责调用支付宝的API
         AlipayClient alipayClient = new DefaultAlipayClient(serverUrl, appId,
                 privateKey, FORMAT, charset, alipayPublicKey, signType);
         // 2. 创建 Request并设置Request参数
@@ -81,7 +44,7 @@ public class AliPayServiceImpl implements AliPayService {
         bizContent.put("out_trade_no", orderId);  // 我们自己生成的订单编号
         bizContent.put("total_amount", totalAmount); // 订单的总金额
         bizContent.put("subject", subject);   // 支付的名称
-        bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");// 固定配置
+        bizContent.put("product_code", "FAST_INSTANT_TRADE_PAY");  // 固定配置
         request.setBizContent(bizContent.toString());
         // 执行请求，拿到响应的结果，返回给浏览器
         String form = "";
@@ -90,6 +53,6 @@ public class AliPayServiceImpl implements AliPayService {
         } catch (AlipayApiException e) {
             e.printStackTrace();
         }
-        return form;*/
+        return form;
     }
 }

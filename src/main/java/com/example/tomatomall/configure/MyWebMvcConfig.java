@@ -20,6 +20,9 @@ public class MyWebMvcConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/api/products")
                 .excludePathPatterns("/api/products/*")
                 .excludePathPatterns("/api/products/**")
+                .excludePathPatterns("/api/orders/returnUrl")
+                .excludePathPatterns("/api/orders/notify")
+                .excludePathPatterns("/favicon.ico")
                 .order(1);
     }
 }

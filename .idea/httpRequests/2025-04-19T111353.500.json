@@ -1,0 +1,6 @@
+{
+  "timestamp": "2025-04-19T03:13:53.461+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "path": "/api/orders/29/pay"
+}

@@ -1,0 +1,12 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "orderId": "26",
+    "username": "test",
+    "totalAmount": 0.01,
+    "paymentMethod": "Alipay",
+    "createTime": "2025-04-19T10:47:04.332",
+    "status": "PENDING"
+  }
+}

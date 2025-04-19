@@ -1,0 +1,40 @@
+{
+  "code": "200",
+  "msg": "请求成功",
+  "data": {
+    "items": [
+      {
+        "cartItemId": "5",
+        "productId": "8",
+        "title": "test",
+        "price": 100.0,
+        "description": "test",
+        "cover": "test",
+        "detail": null,
+        "quantity": 5
+      },
+      {
+        "cartItemId": "6",
+        "productId": "2",
+        "title": "中以北第统",
+        "price": 948.65,
+        "description": "qXBvLMNMZM",
+        "cover": "mQshnXtCkL",
+        "detail": null,
+        "quantity": 1
+      },
+      {
+        "cartItemId": "7",
+        "productId": "29",
+        "title": "test5",
+        "price": 0.01,
+        "description": "test",
+        "cover": "test",
+        "detail": null,
+        "quantity": 1
+      }
+    ],
+    "total": 3,
+    "totalAmount": 1448.66
+  }
+}

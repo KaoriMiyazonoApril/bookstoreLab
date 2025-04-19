@@ -1,0 +1,14 @@
+{
+  "code": "200",
+  "msg": null,
+  "data": {
+    "cartItemId": "8",
+    "productId": "30",
+    "title": "test6",
+    "price": 0.01,
+    "description": "test",
+    "cover": "test",
+    "detail": null,
+    "quantity": 2
+  }
+}
